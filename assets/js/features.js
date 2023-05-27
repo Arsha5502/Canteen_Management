@@ -32,7 +32,7 @@ if (previewNavbar) {
                 </ul>
             </nav>
         </div>
-    `
+    `;
 }
 
 //  --- Intro Mobile NavBar ---
@@ -270,11 +270,8 @@ function customerFooterUI() {
                     <!-- About College -->
                     <article class="about">
                         <h1 class="sm">about</h1>
-                        <p>Malwa Institute of Technology is governed by Indus 
-                        Global Educational & Welfare Society which was founded 
-                        in 2003 by a group of industrialists and educationalists
-                        who shared a vision of establishing centers of scientific
-                        learning around the country.</p>
+                        <p>The Federal Institute of Science and Technology (FISAT) is a self-financing private engineering college established and promoted by the Federal Bank Officers’ Association Educational Society (FBOAES). 
+                        Established in 2002, the institution is accredited by the National Assessment and Accreditation Council (NAAC) with an ‘A+’ grade in the 2nd cycle. The National Board of Accreditation (NBA) has accredited five B.Tech programmes.  FISAT is located in Mookannoor, near Angamaly in Ernakulam District, Kerala, the birthplace of The Federal Bank Ltd. founder, Late K P Hormis, and the campus is named “Hormis Nagar” in his honour.</p>
                         <ul class="py-1">
                             <li><i class="fab fa-facebook-f"></i><a href="https://www.facebook.com/malwainstitute/" target="_blank"> Facebook</a></li>
                             <li><i class="fab fa-instagram"></i><a href="https://www.instagram.com/malwa_institute_of_technology/" target="_blank">Instagram</a></li>
@@ -287,24 +284,19 @@ function customerFooterUI() {
                             <li><a href="index.html">Canteen Home</a></li>
                             <li><a href="our-vision.html">Our Vision</a></li>
                             <li><a href="https://github.com/rvutd/mit-canteen-site" target="_blank">Git Repository</a></li>
-                            <li><a href="https://mitindore.co.in/" target="_blank">MIT Indore</a></li>
+                            <li><a href="https://fisat.ac.in/" target="_blank">FISAT Angamaly Ernakulam</a></li>
                         </ul>
                     </article>
                     <!-- Contact Details -->
                     <article class="contact">
                         <ul>
                             <h1 class="sm">Contact Information</h1>
-                            <li> <i class="fas fa-phone-alt"></i> <p>+91-731-2810001-08</p></li>
-                            <li> <i class="fas fa-envelope"></i> <p>admission@mitindore.co.in</p></li>
-                            <li> <i class="fas fa-map-marker-alt"></i> <p>Indore-Dewas Bypass Road, Indore (MP)-452016</p></li>
-                            <li> <i class="fas fa-globe-asia"></i> <p>For Professional Courses, Visit: www.altius.ac.in</p></li>
+                            <li> <i class="fas fa-phone-alt"></i> <p> 0484 2725272, 8547704139, 9495737577</p></li>
+                            <li> <i class="fas fa-envelope"></i> <p>mail@fisat.ac.in</p></li>
+                            <li> <i class="fas fa-map-marker-alt"></i> <p> Hormis Nagar, Mookkannoor P O, Angamaly, Ernakulam Dt. Kerala, India – 683 577 </p></li>
+                            <li> <i class="fas fa-globe-asia"></i> <p>For Professional Courses, Visit: www.fisat.ac.in</p></li>
                         </ul>
                     </article>
-                </main>
-                <!-- Deep Devs Info -->
-                <main class="deep-devs flex">
-                    <div>© Copyright 2020 - 2021. All Rights Reserved</div>
-                    <div class="">Designed & Developed with <i class="fas fa-heart clr-red"></i> By <a href="#">Deep Devs</a></div>
                 </main>
             </section>
         `;
@@ -325,11 +317,7 @@ function userFooterUI() {
                     <!-- About College -->
                     <article class="about">
                         <h1 class="sm">about</h1>
-                        <p>Malwa Institute of Technology is governed by Indus 
-                        Global Educational & Welfare Society which was founded 
-                        in 2003 by a group of industrialists and educationalists
-                        who shared a vision of establishing centers of scientific
-                        learning around the country.</p>
+                        <p>The Federal Institute of Science and Technology (FISAT) is a self-financing private engineering college established and promoted by the Federal Bank Officers’ Association Educational Society (FBOAES). The FBOAES is an initiative of the Federal Bank Officers’ Association (FBOA), the sole representative body of all Federal Bank officers.Established in 2002, the institution is accredited by the National Assessment and Accreditation Council (NAAC) with an ‘A+’ grade in the 2nd cycle. The National Board of Accreditation (NBA) has accredited five B.Tech programmes.  FISAT is located in Mookannoor, near Angamaly in Ernakulam District, Kerala, the birthplace of The Federal Bank Ltd. founder, Late K P Hormis, and the campus is named “Hormis Nagar” in his honour.</p>
                         <ul class="py-1">
                             <li><i class="fab fa-facebook-f"></i><a href="https://www.facebook.com/malwainstitute/" target="_blank"> Facebook</a></li>
                             <li><i class="fab fa-instagram"></i><a href="https://www.instagram.com/malwa_institute_of_technology/" target="_blank">Instagram</a></li>
@@ -355,11 +343,6 @@ function userFooterUI() {
                             <li> <i class="fas fa-globe-asia"></i> <p>For Professional Courses, Visit: www.altius.ac.in</p></li>
                         </ul>
                     </article>
-                </main>
-                <!-- Deep Devs Info -->
-                <main class="deep-devs flex">
-                    <div>© Copyright 2020 - 2021. All Rights Reserved</div>
-                    <div class="">Designed & Developed with <i class="fas fa-heart clr-red"></i> By <a href="#">Deep Devs</a></div>
                 </main>
             </section>
         `;
