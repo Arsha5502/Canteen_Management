@@ -42,6 +42,10 @@ body {
   color: #333;
 }
 
+div {
+  margin: 0;
+}
+
 /* Scroll Bar */
 ::-webkit-scrollbar {
   width: 8px;
@@ -100,7 +104,7 @@ button {
   outline: none;
 }
 
-section{
+section {
   position: relative;
 }
 
@@ -310,6 +314,8 @@ span {
 /* Navbar */
 .navbar {
   background: #1e2022;
+  margin: 0;
+  margin-right: 0;
 }
 
 .navbar h1 span {
@@ -318,6 +324,7 @@ span {
 
 .navbar .container {
   justify-content: space-around;
+  margin-right:0px;
 }
 
 .site-nav {
@@ -354,10 +361,9 @@ span {
   box-shadow: 0 0 10px 0 #f8425f inset, 0 0 10px 4px #f8425f;
   -webkit-transition: all 150ms ease-in-out;
   transition: all 150ms ease-in-out;
-  font-size:18px;
+  font-size: 18px;
   margin-top: 20px;
   align-items: baseline;
-  
 }
 
 .navbar .btn:hover {
@@ -480,20 +486,19 @@ span {
 /* Hero Section */
 .hero {
   height: 500px;
-  
 }
 
-.hero h1{
+.hero h1 {
   position: relative;
   z-index: 1;
-  padding:2%;
+  padding: 2%;
 }
 
 .hero img {
   max-width: 550px;
   position: relative;
   z-index: 2;
-  padding-right: 2% ;
+  padding-right: 2%;
   padding-left: 2%;
   padding-bottom: 2%;
   padding-top: 20px;
@@ -501,12 +506,11 @@ span {
 
 .hero h3 {
   font-size: 30px;
-  position:relative;
+  position: relative;
   z-index: 3;
-
 }
 
-.hero .p-2{
+.hero .p-2 {
   padding-left: 150px;
 }
 
@@ -538,14 +542,14 @@ span {
   margin: 5px 0;
 }
 
-.grid-grid-3{
+.grid-grid-3 {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
 }
 
-.grid-grid-3 .m-2{
-  flex:1;
+.grid-grid-3 .m-2 {
+  flex: 1;
   flex-basis: 0;
 }
 

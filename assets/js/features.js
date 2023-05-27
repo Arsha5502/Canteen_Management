@@ -23,12 +23,16 @@ if (previewNavbar) {
                 <ul class="flex">
                     <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
                     <li><a href="our-vision.html"><i class="far fa-eye"></i> Our Vision</a></li>
+                </ul>
+                <ul>
+                  <div>
                     <button  class="btn" id="sign-modal">Log In</button>
                     <button  class="btn" id="signup-modal">Sign Up</button>
+                  </div>
                 </ul>
             </nav>
         </div>
-   `
+    `
 }
 
 //  --- Intro Mobile NavBar ---
