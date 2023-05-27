@@ -302,7 +302,7 @@ span {
 }
 
 #cart-btn:hover {
-  color: rgb(126, 125, 125);
+  color: rgb(214, 52, 52);
 }
 
 .cart-innerlay .cart-item img {
@@ -370,6 +370,8 @@ span {
   border-color: #34c95e;
   box-shadow: 0 0 10px 0 #34c95e inset, 0 0 10px 4px #34c95e;
 }
+
+
 
 /* Toggle Bars */
 .toggle-bars {

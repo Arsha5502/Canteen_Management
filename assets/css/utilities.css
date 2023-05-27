@@ -48,7 +48,9 @@
 /* Aligning Content */
 .align-item-center { align-items: center; }
 
-.align-item-left { align-items: left; }
+.align-items-left { align-items: left; }
+
+.align-items-right { align-items: right; }
 
 
 .jc-space-evenly { justify-content: space-evenly; }
