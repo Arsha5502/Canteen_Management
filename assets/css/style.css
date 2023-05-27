@@ -310,12 +310,13 @@ span {
   height: 76px;
 }
 
-/* ------------- Home Page CSS -------------- */
+/* ------------- Home Page CSS -------------- */ 
 /* Navbar */
 .navbar {
-  background: #475d72;
+  background:#1c1210;;
   margin: 0;
   margin-right: 0;
+  
 }
 
 .navbar h1 span {
@@ -323,8 +324,9 @@ span {
 }
 
 .navbar .container {
-  justify-content: space-around;
+  justify-content:space-evenly;
   margin-right:0px;
+  
 }
 
 .site-nav {
@@ -342,19 +344,21 @@ span {
 .navbar ul,
 .navbar li {
   font-size: 17px;
-  margin-top: 2px;
+  margin-top: 1.5px;
   padding: 9px;
+  padding-right: 1.5px;
 }
 
 .navbar .right-nav a {
   color: rgb(240, 248, 255);
 }
 .navbar .right-nav a:hover {
-  color: rgb(214, 52, 52);
+  color: rgb(52, 125, 214);
 }
 
 .navbar button {
   padding: 0px 25px;
+ 
   border-color: #f8425f;
   color: #fff;
   background: #000;
@@ -362,8 +366,8 @@ span {
   -webkit-transition: all 150ms ease-in-out;
   transition: all 150ms ease-in-out;
   font-size: 17px;
-  margin-top: 7px;
-  align-items: baseline;
+  margin-top: 7.3px;
+  /* align-items: baseline; */
 }
 
 .navbar .btn:hover {
@@ -412,7 +416,7 @@ span {
 }
 
 .logo img {
-  width: 50px; /* Adjust the width as needed */
+  width: 60px; /* Adjust the width as needed */
   height: auto; /* Preserve the aspect ratio */
 }
 
@@ -488,22 +492,26 @@ span {
 /* Hero Section */
 .hero {
   height: 500px;
+  background-color:rgb(226, 201, 135);
+  margin-top: 10px;
 }
 
 .hero h1 {
   position: relative;
   z-index: 1;
   padding: 2%;
+  
 }
 
 .hero img {
   max-width: 550px;
+  height: auto;
   position: relative;
   z-index: 2;
   padding-right: 2%;
-  padding-left: 2%;
+  padding-left: 1%;
   padding-bottom: 2%;
-  padding-top: 20px;
+  padding-top: 15px;
 }
 
 .hero h3 {
@@ -525,6 +533,7 @@ span {
 .showcase h5 {
   color: #aea512;
   text-transform: uppercase;
+  
 }
 
 .showcase h1,
@@ -548,6 +557,7 @@ span {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
+  background-color:rgb(226, 201, 135);
 }
 
 .grid-grid-3 .m-2 {
@@ -564,6 +574,7 @@ span {
   max-width: 1600px;
   margin-bottom: 60px;
   margin: 0 auto;
+  background-color:rgb(226, 201, 135);
 }
 
 .dishes .grid {

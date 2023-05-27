@@ -1,7 +1,7 @@
 //  --- Intro NavBar ---
 const previewNavbar = document.querySelector("#preview-navbar");
 if (previewNavbar) {
-  previewNavbar.innerHTML = `
+  previewNavbar.innerHTML =`
         <div class="container flex jc-space-between">
             <!-- Left Navigation -->
             <div class="site-title flex left-nav align-items-left">
@@ -9,7 +9,7 @@ if (previewNavbar) {
                   <img src="logo.png" alt="Logo">
                 </a>
                 <div>
-                    <a href="index.html"><h1><span class="clr-blue" style= "color:#004e95">FISAT</span> <span class="clr-green">Canteen</span></h1></a>
+                    <a href="index.html"><h1><span class="clr-blue" style= "color:rgb(44, 72, 230); font-size:27px">FISAT</span> <span  style="color:lightsteelblue ;font-family: timesnewroman">Canteen</span></h1></a>
                 </div>
                 <!-- Toggle Bars -->
                 <div class="toggle-bars mybar">
