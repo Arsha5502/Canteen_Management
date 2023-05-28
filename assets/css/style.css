@@ -318,6 +318,7 @@ span {
   background:#1c1210;
   margin: 0;
   margin-right: 0;
+  height: 80px;
   
 }
 
@@ -338,6 +339,7 @@ span {
 
 .sit-title {
   align-items: left;
+  
 }
 .btn {
   transition: 0.35s;
@@ -418,7 +420,7 @@ span {
 }
 
 .logo img {
-  width: 90px; /* Adjust the width as needed */
+  width: 75px; /* Adjust the width as needed */
   height: auto; /* Preserve the aspect ratio */
 }
 
@@ -531,10 +533,14 @@ span {
   font-size: 16px;
 }
 
-/* Come & Dine Section */
+/* Come & meet Section */
+
+
+
 .showcase h6 {
-  color: #aea512;
+  color: #8e870a;
   text-transform: uppercase;
+ 
   
 }
 
@@ -542,7 +548,7 @@ span {
 .showcase h4,
 .showcase {
   color: #533834;
-  margin-top: 0;
+  margin-top: 0.1px;
 }
 
 .showcase h1,
