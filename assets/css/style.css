@@ -318,7 +318,7 @@ span {
   background:#1c1210;
   margin: 0;
   margin-right: 0;
-  height: 80px;
+  height: 100px;
   
 }
 
@@ -420,7 +420,7 @@ span {
 }
 
 .logo img {
-  width: 75px; /* Adjust the width as needed */
+  width: 85px; /* Adjust the width as needed */
   height: auto; /* Preserve the aspect ratio */
 }
 
