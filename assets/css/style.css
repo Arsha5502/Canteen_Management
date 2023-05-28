@@ -957,10 +957,13 @@ tr {
 
 .product-management .container-min {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  margin: 40px auto;
+  /* margin: 40px auto; */
   padding: 20px;
   max-width: 120vh;
+  
+  
 }
+
 
 .add-product .container-min {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;

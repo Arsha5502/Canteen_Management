@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mit Canteen | Orders Status</title>
+    <title>FISAT Canteen | Orders Status</title>
     
     <!-- Page Icon -->
-    <link rel="Micosoft icon" href="assets/images/MIT LOGO.png">
+    <link rel="Micosoft icon" href="logo.png"  >
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" 
@@ -32,9 +32,12 @@
     
     <!-- NavBar -->
     <header class="navbar">
-        <div class="container flex text-center jc-ai-center">
+        <div class="container flex jc-space-between">
             <!-- Left Navigation -->
-            <div class="site-title flex align-item-center">
+            <div class="site-title flex left-nav align-items-left">
+                <a class="logo" href="#">
+                    <img src="logo.png" alt="Logo">
+                </a>
                 <div>
                     <a href="client-side.html"><h1><span class="clr-red">Mit</span> <span class="clr-green">Canteen</span></h1></a>
                 </div>
@@ -46,7 +49,7 @@
                 </div>
             </div>
             <!-- Right Navigation -->
-            <nav class="site-nav flex left-nav align-item-center">                
+            <nav class="site-nav flex right-nav align-items-right text-left">                
                 <ul class="flex">
                     <li><a href="client-side.html"><i class="fas fa-cocktail"></i> Menu</a></li>
                     <li><a href="user-orders.html"><i class="fas fa-coins"></i> Your Orders</a></li>
@@ -119,9 +122,6 @@
     <section class="orders p-orders">
         <main class="previous-orders"></main>
     </section>
-
-    <!-- User Footer -->
-    <footer class="customer-footer" id="user-footer" style="margin-top: 10rem;"><!-- Comes Through JS --></footer>
 
     <!-- Page Animations -->
     <script src="assets/js/animations.js"></script>
