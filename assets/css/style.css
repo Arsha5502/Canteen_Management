@@ -17,8 +17,7 @@
 *,
 * ::after,
 * ::before {
-  box-sizing: border-box;
-  margin: 0;
+  box-sizing:content-box;
   padding: 0;
 }
 
@@ -106,6 +105,9 @@ button {
 
 section {
   position: relative;
+  background-color:rgb(226, 201, 135);
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 /* ---------------- Registration System Modal ----------------- */
@@ -416,7 +418,7 @@ span {
 }
 
 .logo img {
-  width: 60px; /* Adjust the width as needed */
+  width: 90px; /* Adjust the width as needed */
   height: auto; /* Preserve the aspect ratio */
 }
 
@@ -455,8 +457,8 @@ span {
 }
 
 .mob-navbar img {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height:auto;
   text-align: center;
 }
 
@@ -492,8 +494,8 @@ span {
 /* Hero Section */
 .hero {
   height: 500px;
-  background-color:rgb(226, 201, 135);
-  margin-top: 10px;
+  /* background-color:rgb(226, 201, 135); */
+  /* margin-top: 10px; */
 }
 
 .hero h1 {
@@ -521,7 +523,7 @@ span {
 }
 
 .hero .p-2 {
-  padding-left: 150px;
+  padding-left: 100px;
 }
 
 .hero p {
@@ -530,7 +532,7 @@ span {
 }
 
 /* Come & Dine Section */
-.showcase h5 {
+.showcase h6 {
   color: #aea512;
   text-transform: uppercase;
   
@@ -540,6 +542,7 @@ span {
 .showcase h4,
 .showcase {
   color: #533834;
+  margin-top: 0;
 }
 
 .showcase h1,
@@ -550,7 +553,7 @@ span {
 .showcase img {
   width: 100px;
   height: 100px;
-  margin: 5px 0;
+  /* margin: 5px 0; */
 }
 
 .grid-grid-3 {

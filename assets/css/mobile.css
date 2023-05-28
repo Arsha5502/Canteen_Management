@@ -24,11 +24,20 @@
     .our-history .grid { justify-items: center; }
     /* Our Vision -> Main image */
     .main-img img { margin-top: 15px;}
+
+    .logo img {
+        width:90px;
+        height: auto;
+    }
 }
 /* Split screen */
 @media ( max-width: 950px) {
     .hero { height: 800px;}
     .hero-article .my-2 { margin-top: -8em;}
+    .logo img {
+        width:90px;
+        height: auto;
+    }
 }
 
 /* iPads and Other Devices */
@@ -47,6 +56,10 @@
 
     /* Our Vision -> Main image */
     .main-img img { height: 600px;}
+    .logo img {
+        width:90px;
+        height: auto;
+    }
 }
 
  /* Mobile Devices */
@@ -87,7 +100,10 @@
         border-top-left-radius: 6px; border-top-right-radius: 6px;
         border-bottom-left-radius: 0;
     }
+    .logo img {
+        width:90px;
+        height: auto;
+    }
 }
-
 
 

@@ -91,11 +91,11 @@ button {cursor: pointer;}
 .xxl { font-size: 5rem;}
 
 /* Margin Y Axis */
-.my-1 { margin: 1rem auto;}
-.my-2 { margin: 2rem auto;}
+/* .my-1 { margin: 1rem auto;}
+.my-2 { margin: 2rem auto;} 
 .my-3 { margin: 3rem auto;}
 .my-4 { margin: 4rem auto;}
-.my-5 { margin: 5rem auto;}
+.my-5 { margin: 5rem auto;} */
 
 /* Margin XY Axis */
 .m-1 { margin: 1rem;}
