@@ -2,36 +2,38 @@
 const previewNavbar = document.querySelector("#preview-navbar");
 if (previewNavbar) {
   previewNavbar.innerHTML =`
-        <div class="container flex jc-ai-center">
-            <!-- Left Navigation -->
-            <div class="site-title flex align-items-left">
-                <a class="logo" href="#">
-                  <img src="logo.png" alt="Logo">
-                </a>
-                <div>
-                    <a href="index.html"><h1><span class="clr-blue" style= "color:rgb(44, 72, 230); font-size:27px;">FISAT</span> <span  style="color:lightsteelblue ;font-family: timesnewroman">Canteen</span></h1></a>
-                </div>
-                <!-- Toggle Bars -->
-                <div class="toggle-bars mybar">
-                    <div class="bars bar-1"></div>
-                    <div class="bars bar-2"></div>
-                    <div class="bars bar-3"></div>
-                </div>
-            </div>
-            <!-- Right Navigation -->
-            <nav class="site-nav flex right-nav align-items-right text-left">                
-                <ul class="flex">
-                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-                    <li><a href="our-vision.html"><i class="far fa-eye"></i> Our Vision</a></li>
-                </ul>
-                <ul>
-                  <div>
-                    <button  class="btn" id="sign-modal">Log In</button>
-                    <button  class="btn" id="signup-modal">Sign Up</button>
-                  </div>
-                </ul>
-            </nav>
+  <div class="flex text-center jc-ai-center">
+  <!-- Left Navigation -->
+  <div class="site-title flex align-item-left">
+      <a class="logo" href="#">
+        <img src="logo.png" alt="Logo">
+      </a>
+      <div>
+          <a href="index.html"><h1><span class="clr-blue" style= "color:rgb(44, 72, 230); font-size:27px;">FISAT</span> <span  style="color:lightsteelblue ;font-family: timesnewroman">Canteen</span></h1></a>
+      </div>
+      <!-- Toggle Bars -->
+      <div class="toggle-bars mybar">
+          <div class="bars bar-1"></div>
+          <div class="bars bar-2"></div>
+          <div class="bars bar-3"></div>
+      </div>
+  </div>
+  <!-- Right Navigation -->
+  <nav class="site-nav flex right-nav align-items-right" style="padding-left:610px"
+>
+      <ul class="flex">
+          <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="our-vision.html"><i class="far fa-eye"></i> Our Vision</a></li>
+      </ul>
+      <ul>
+        <div>
+          <button  class="btn" id="sign-modal">Log In</button>
+          <button  class="btn" id="signup-modal">Sign Up</button>
         </div>
+      </ul>
+  </nav>
+</div>
+
     `;
 }
 
