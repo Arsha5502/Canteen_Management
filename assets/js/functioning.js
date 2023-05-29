@@ -101,7 +101,7 @@
 
     static authRedirecting() {
       window.setTimeout(() => {
-        window.location.replace('https://mit-canteen.netlify.app/client-side');
+        window.location.replace('./client-side.html');
       }, 500)
     }
 
@@ -118,7 +118,7 @@
     firebaseAuthRedirect(){
       firebase.auth().onAuthStateChanged(function(user) {
         // If user is registered -
-        user ?  window.location.replace('https://mit-canteen.netlify.app/client-side') : console.log('none');
+        user ?  window.location.replace('./client-side.html') : console.log('none');
       });
     }
   }
