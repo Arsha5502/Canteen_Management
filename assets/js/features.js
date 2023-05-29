@@ -178,7 +178,7 @@ if (signUpModal) {
     <div class="modal-container">
         <!-- Written Stuff -->
         <div class="modal-content">
-            <div class="md">Welcome to <br><span class="clr-red md">Mit</span> <span class="clr-green md">Canteen</span></div>
+            <div class="md">Welcome to <br><span class="clr-blue" style= "color:rgb(44, 72, 230); md">FISAT</span> <span class="clr-green md">Canteen</span></div>
             <div><i onclick="signUpModal.classList.remove('show');" class="fas fa-times"></i></div>
         </div>
         <!-- Other way of LogIn's -->

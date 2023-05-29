@@ -46,11 +46,11 @@
 .bold { font-weight: bold;}
 
 /* Aligning Content */
-.align-item-center { align-items: center; }
+.align-item-center { align-item: center; }
 
-.align-items-left { align-items: left; }
+.align-items-left { align-item: left; }
 
-.align-items-right { align-items: right; }
+.align-items-right { align-item: right; }
 
 
 .jc-space-evenly { justify-content: space-evenly; }

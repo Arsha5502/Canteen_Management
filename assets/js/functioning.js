@@ -229,8 +229,11 @@
             title: 'Logged Out Successfully',
           })
           firebase.auth().signOut().then(() => {
+
             window.location.replace("https://mit-canteen.netlify.app/index.html")
  
+            window.location.replace("./index.html")
+
           });
         });
       })
