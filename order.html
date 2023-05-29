@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<<<<<<< HEAD
     <title>FISAT Canteen | Sign In/Up</title>
+=======
+    <title>FISAT Canteen | Orders</title>
+>>>>>>> 33918fb797d4ee52533672f20522072bd95c8e82
 
     <!-- Page Icon -->
     <link rel="Micosoft icon" href="logo.png" />
@@ -34,14 +38,23 @@
   <body>
     <!-- NavBar -->
     <header class="navbar">
-      <div class="container flex text-center jc-ai-center">
-        <!-- Left Navigation -->
-        <div class="site-title flex align-item-center">
+      <div class="flex text-center jc-ai-center">
+        <div class="site-title flex align-item-left">
+          <a class="logo" href="#">
+            <img src="logo.png" alt="Logo" />
+          </a>
           <div>
-            <a href="index.html"
-              ><h1>
-                <span class="clr-red">FISAT</span>
-                <span class="clr-green">Canteen Admin</span>
+            <a href="index.html">
+              <h1>
+                <span class="clr-blue" style="color: #004e95">FISAT</span>
+                <span
+                  class="clr-green"
+                  style="
+                    font-family: Cambria, Cochin, Georgia, Times,
+                      'Times New Roman', serif;
+                  "
+                  >Canteen Admin</span
+                >
               </h1></a
             >
           </div>
@@ -53,11 +66,11 @@
           </div>
         </div>
         <!-- Right Navigation -->
-        <nav class="site-nav flex left-nav align-item-center">
+        <nav class="site-nav flex right-nav align-items-right" style="padding-left:630px">
           <ul class="flex">
             <li><a href="order.html">Orders</a></li>
             <li><a href="admin-side.html">Product Management</a></li>
-            <button class="btn" id="logout" style="padding: 10px 20px">
+            <button class="btn" id="logout" >
               Log Out
             </button>
           </ul>

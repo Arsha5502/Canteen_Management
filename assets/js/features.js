@@ -2,9 +2,9 @@
 const previewNavbar = document.querySelector("#preview-navbar");
 if (previewNavbar) {
   previewNavbar.innerHTML =`
-        <div class="container flex jc-space-between">
+        <div class="container flex jc-ai-center">
             <!-- Left Navigation -->
-            <div class="site-title flex left-nav align-items-left">
+            <div class="site-title flex align-items-left">
                 <a class="logo" href="#">
                   <img src="logo.png" alt="Logo">
                 </a>
