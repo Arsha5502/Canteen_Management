@@ -9,7 +9,7 @@ if (previewNavbar) {
         <img src="logo.png" alt="Logo">
       </a>
       <div>
-          <a href="index.html"><h1><span class="clr-blue" style= "color:rgb(44, 72, 230); font-size:27px;">FISAT</span> <span  style="color:lightsteelblue ;font-family: timesnewroman">Canteen</span></h1></a>
+          <a href="index.html"><h1><span style= "color:#004e95; font-size:27px;">FISAT</span> <span  style="color:lightsteelblue ;font-family: timesnewroman;">Canteen</span></h1></a>
       </div>
       <!-- Toggle Bars -->
       <div class="toggle-bars mybar">
@@ -19,7 +19,7 @@ if (previewNavbar) {
       </div>
   </div>
   <!-- Right Navigation -->
-  <nav class="site-nav flex right-nav align-items-right" style="padding-left:650px"
+  <nav class="site-nav flex right-nav align-items-right" style="padding-left:720px"
 >
       <ul class="flex">
           <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
