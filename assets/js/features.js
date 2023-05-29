@@ -1,37 +1,37 @@
 //  --- Intro NavBar ---
 const previewNavbar = document.querySelector("#preview-navbar");
 if (previewNavbar) {
-  previewNavbar.innerHTML =`
+  previewNavbar.innerHTML = `
   <div class="flex text-center jc-ai-center">
   <!-- Left Navigation -->
-  <div class="site-title flex align-item-left">
-      <a class="logo" href="#">
-        <img src="logo.png" alt="Logo">
-      </a>
-      <div>
-          <a href="index.html"><h1><span style= "color:#004e95; font-size:27px;">FISAT</span> <span  style="color:lightsteelblue ;font-family: timesnewroman;">Canteen</span></h1></a>
-      </div>
-      <!-- Toggle Bars -->
-      <div class="toggle-bars mybar">
-          <div class="bars bar-1"></div>
-          <div class="bars bar-2"></div>
-          <div class="bars bar-3"></div>
-      </div>
-  </div>
-  <!-- Right Navigation -->
-  <nav class="site-nav flex right-nav align-items-right" style="padding-left:720px"
->
-      <ul class="flex">
-          <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-          <li><a href="our-vision.html"><i class="far fa-eye"></i> Our Vision</a></li>
-      </ul>
-      <ul>
+    <div class="site-title flex align-item-left">
+        <a class="logo" href="#">
+          <img src="logo.png" alt="Logo">
+        </a>
         <div>
-          <button  class="btn" id="sign-modal">Log In</button>
-          <button  class="btn" id="signup-modal">Sign Up</button>
+            <a href="index.html"><h1><span style= "color:#004e95; font-size:27px;">FISAT</span> <span  style="color:lightsteelblue ;font-family: timesnewroman;">Canteen</span></h1></a>
         </div>
-      </ul>
-  </nav>
+        <!-- Toggle Bars -->
+        <div class="toggle-bars mybar">
+            <div class="bars bar-1"></div>
+            <div class="bars bar-2"></div>
+            <div class="bars bar-3"></div>
+        </div>
+    </div>
+    <!-- Right Navigation -->
+    <nav class="site-nav flex right-nav align-item-right"
+  >
+        
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="our-vision.html"><i class="far fa-eye"></i> Our Vision</a></li>
+        
+
+          <div>
+            <button  class="btn" id="sign-modal">Log In</button>
+            <button  class="btn" id="signup-modal">Sign Up</button>
+          </div>
+        
+    </nav>
 </div>
 
     `;

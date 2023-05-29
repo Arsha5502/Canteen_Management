@@ -38,6 +38,7 @@
         width:90px;
         height: auto;
     }
+    
 }
 
 /* iPads and Other Devices */
@@ -48,6 +49,7 @@
     .toggle-bars { display: inline-block ; cursor: pointer; }
 
     .site-title { justify-content: space-between; width: 100%; }
+
     
     .mob-container { max-width: 40vw; background-color: blue; }
 
@@ -60,6 +62,7 @@
         width:90px;
         height: auto;
     }
+    
 }
 
  /* Mobile Devices */
@@ -105,5 +108,4 @@
         height: auto;
     }
 }
-
 
