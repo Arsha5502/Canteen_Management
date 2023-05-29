@@ -541,6 +541,7 @@ span {
 .showcase h6 {
   color: #8e870a;
   text-transform: uppercase;
+  margin-top: 0.1px;
  
   
 }
@@ -555,6 +556,7 @@ span {
 .showcase h1,
 .showcase h3 {
   font-size-adjust: none;
+  margin-top: 0.1px;
 }
 
 .showcase img {
@@ -573,17 +575,21 @@ span {
 .grid-grid-3 .m-2 {
   flex: 1;
   flex-basis: 0;
+  margin-top: 0.1px;
+  margin-left: 5px;
 }
 
 .showcase p {
   font-size: 17px;
 }
 
+
 /* Most Loved Dishes */
 .dishes .container-min {
   max-width: 1600px;
   margin-bottom: 60px;
-  margin: 0 auto;
+  margin-left: 65px;
+  /* margin: 10 auto; */
   background-color:rgb(226, 201, 135);
 }
 
