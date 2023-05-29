@@ -19,7 +19,7 @@ if (previewNavbar) {
       </div>
   </div>
   <!-- Right Navigation -->
-  <nav class="site-nav flex right-nav align-items-right" style="padding-left:610px"
+  <nav class="site-nav flex right-nav align-items-right" style="padding-left:650px"
 >
       <ul class="flex">
           <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>

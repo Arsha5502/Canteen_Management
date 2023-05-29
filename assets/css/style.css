@@ -410,7 +410,7 @@ span {
 }
 
 /* Number of items in Cart */
-.left-nav p {
+.right-nav p {
   padding: 1px 5px;
   margin-left: 2px;
   border-radius: 10vh;
@@ -419,6 +419,7 @@ span {
   color: #ffffff;
   font-size: 15px;
 }
+
 
 .logo img {
   width: 85px; /* Adjust the width as needed */
