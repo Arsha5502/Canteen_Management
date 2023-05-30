@@ -316,12 +316,13 @@ span {
 /* ------------- Home Page CSS -------------- */ 
 /* Navbar */
 .navbar {
-  background:#1c1210;
+  background: #1c1210;
   margin: 0;
   margin-right: 0;
   height: 80px;
+  display: flex;
   align-items: center;
-  
+  justify-content: space-between;
 }
 
 .navbar h1 span {
@@ -329,38 +330,36 @@ span {
 }
 
 .navbar .container {
-  justify-content:space-evenly;
-  margin-right:5px;
-  
+  display: flex;
+  justify-content: flex-start; /* Align items to the left */
+  margin-right: 5px;
 }
 
 .site-nav {
-  justify-content: space-between;
-  align-items: right;
+  display: flex;
+  justify-content: flex-end; /* Align items to the right */
+  align-items: center;
 }
 
-.sit-title {
-  align-items: left;
-  
-}
-.btn {
-  transition: 0.35s;
+.navbar .right-nav {
+  display: flex;
+  justify-content: flex-end; /* Align items to the right */
+  align-items: center;
 }
 
 .navbar ul,
 .navbar li {
   font-size: 17px;
   margin-top: 1.5px;
-  
   padding: 9px;
   padding-right: 1.5px;
 }
-
 
 .navbar .right-nav a {
   color: rgb(240, 248, 255);
   margin-right: 5px;
 }
+
 .navbar .right-nav a:hover {
   color: rgb(52, 125, 214);
 }
@@ -368,7 +367,6 @@ span {
 .navbar button {
   padding: 0px 25px;
   margin-right: 5px;
- 
   border-color: #f8425f;
   color: #fff;
   background: #000;
@@ -377,14 +375,7 @@ span {
   transition: all 150ms ease-in-out;
   font-size: 17px;
   margin-top: 7.3px;
-  /* align-items: baseline; */
 }
-
-.navbar .btn:hover {
-  border-color: #34c95e;
-  box-shadow: 0 0 10px 0 #34c95e inset, 0 0 10px 4px #34c95e;
-}
-
 
 
 /* Toggle Bars */
