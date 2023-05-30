@@ -66,38 +66,31 @@ if (toggleBars) {
 
 // Best Dishes Section
 var bestDishes = [
-  {
-    title: "Masala Sandwich",
+ {
+    title: "Alfam Chicken",
     rating: 4,
-    imgURL: "assets/images/s2.jpg",
+    imgURL: "https://img.onmanorama.com/content/dam/mm/en/food/recipe/images/2021/2/14/alfaham.jpg.transform/onm-articleimagemob/image.jpg",
     description:
       "Sumptuous delicious food baked in our cafe with curated ingredients",
-    price: 30,
+    price: 100,
   },
   {
-    title: "Red Pasta",
+    title: "Noodles",
     rating: 5,
-    imgURL: "assets/images/pasta.jpg",
+    imgURL: "http://yesofcorsa.com/wp-content/uploads/2015/08/2627_noodles.jpg",
     description:
       "Sumptuous delicious food baked in our cafe with curated ingredients",
-    price: 45,
+    price: 75,
   },
   {
-    title: "White Pasta",
+    title: "Fried Rice",
     rating: 5,
-    imgURL: "assets/images/white-pasta.jpg",
+    imgURL: "https://i2.wp.com/www.everydayeasyeats.com/wp-content/uploads/2016/06/Chinese-Fried-Rice-2.jpg?resize=680%2C1020",
     description:
       "Sumptuous delicious food baked in our cafe with curated ingredients",
-    price: 25,
+    price: 100,
   },
-  {
-    title: "French Fries",
-    rating: 4,
-    imgURL: "assets/images/shezuan.jpg",
-    description:
-      "Sumptuous delicious food baked in our cafe with curated ingredients",
-    price: 35,
-  },
+
 ];
 const bestDishesCont = document.querySelector("#best-dishes-container");
 function bestDishesHero() {
@@ -274,10 +267,10 @@ function customerFooterUI() {
                         <h1 class="sm">about</h1>
                         <p>The Federal Institute of Science and Technology (FISAT) is a self-financing private engineering college established and promoted by the Federal Bank Officers’ Association Educational Society (FBOAES). 
                         Established in 2002, the institution is accredited by the National Assessment and Accreditation Council (NAAC) with an ‘A+’ grade in the 2nd cycle. The National Board of Accreditation (NBA) has accredited five B.Tech programmes.  FISAT is located in Mookannoor, near Angamaly in Ernakulam District, Kerala, the birthplace of The Federal Bank Ltd. founder, Late K P Hormis, and the campus is named “Hormis Nagar” in his honour.</p>
-                        // <ul class="py-1">
-                        //     <li><i class="fab fa-facebook-f"></i><a href="https://www.facebook.com/malwainstitute/" target="_blank"> Facebook</a></li>
-                        //     <li><i class="fab fa-instagram"></i><a href="https://www.instagram.com/malwa_institute_of_technology/" target="_blank">Instagram</a></li>
-                        // </ul>
+                        <ul class="py-1">
+                          <li><i class="fab fa-facebook-f"></i><a href="https://www.facebook.com/fisats/" target="_blank"> Facebook</a></li>
+                          <li><i class="fab fa-instagram"></i><a href="https://instagram.com/fisat.official?igshid=MzRlODBiNWFlZA==" target="_blank">Instagram</a></li>
+                          </ul>
                     </article>
                     <!-- Navigation Links -->
                     <article class="quick-links">
