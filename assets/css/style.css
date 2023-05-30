@@ -78,6 +78,9 @@ h6 {
   
 }
 
+li{
+  list-style-type: none;
+}
 ul {
   list-style-type: none;
 }
@@ -540,6 +543,7 @@ span {
   color: #8e870a;
   text-transform: uppercase;
   margin-top: 0.1px;
+  padding-left: 75px;
 
  
   
@@ -550,12 +554,14 @@ span {
 .showcase {
   color: #533834;
   margin-top: 0.1px;
+  padding-left: 75px;
 }
 
 .showcase h1,
 .showcase h3 {
   font-size-adjust: none;
   margin-top: 0.1px;
+  padding-left: 75px;
 }
 
 .showcase img {
