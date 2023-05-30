@@ -425,6 +425,8 @@ span {
 .logo img {
   width: 85px; /* Adjust the width as needed */
   height: auto; /* Preserve the aspect ratio */
+  padding-top: 5.5px;
+  margin-top: 6px;
 }
 
 /* ---------- mobile navbar ------------ */
