@@ -323,9 +323,8 @@ span {
   margin: 0;
   margin-right: 0;
   height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+
+  
 }
 
 .navbar h1 span {
