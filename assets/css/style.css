@@ -424,6 +424,8 @@ span {
 .logo img {
   width: 85px; /* Adjust the width as needed */
   height: auto; /* Preserve the aspect ratio */
+  padding-top: 5.5px;
+  margin-top: 6px;
 }
 
 /* ---------- mobile navbar ------------ */
@@ -592,7 +594,7 @@ span {
 /* Most Loved Dishes */
 .dishes .container-min {
   max-width: 1600px;
-  margin-bottom: 60px;
+  /* margin-bottom: 90px; */
   margin-left:75px;
   /* margin: 10 auto; */
   background-color:rgb(226, 201, 135);
