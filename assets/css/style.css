@@ -543,7 +543,7 @@ span {
   color: #8e870a;
   text-transform: uppercase;
   margin-top: 0.1px;
-  padding-left: 75px;
+  padding-left: 1px;
 
  
   
@@ -554,14 +554,14 @@ span {
 .showcase {
   color: #533834;
   margin-top: 0.1px;
-  padding-left: 75px;
+  padding-left:95px;
 }
 
 .showcase h1,
 .showcase h3 {
   font-size-adjust: none;
   margin-top: 0.1px;
-  padding-left: 75px;
+  padding-left: 2px;
 }
 
 .showcase img {
