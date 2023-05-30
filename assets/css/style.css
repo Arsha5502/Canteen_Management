@@ -320,6 +320,7 @@ span {
   margin: 0;
   margin-right: 0;
   height: 80px;
+  align-items: center;
   
 }
 
@@ -329,7 +330,7 @@ span {
 
 .navbar .container {
   justify-content:space-evenly;
-  margin-right:0px;
+  margin-right:5px;
   
 }
 
@@ -350,6 +351,7 @@ span {
 .navbar li {
   font-size: 17px;
   margin-top: 1.5px;
+  
   padding: 9px;
   padding-right: 1.5px;
 }
@@ -357,6 +359,7 @@ span {
 
 .navbar .right-nav a {
   color: rgb(240, 248, 255);
+  margin-right: 5px;
 }
 .navbar .right-nav a:hover {
   color: rgb(52, 125, 214);
@@ -364,6 +367,7 @@ span {
 
 .navbar button {
   padding: 0px 25px;
+  margin-right: 5px;
  
   border-color: #f8425f;
   color: #fff;
@@ -545,6 +549,7 @@ span {
   color: #8e870a;
   text-transform: uppercase;
   margin-top: 0.1px;
+
  
   
 }
