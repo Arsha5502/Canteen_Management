@@ -66,38 +66,31 @@ if (toggleBars) {
 
 // Best Dishes Section
 var bestDishes = [
-  {
-    title: "Masala Sandwich",
+ {
+    title: "Alfam Chicken",
     rating: 4,
-    imgURL: "assets/images/s2.jpg",
+    imgURL: "https://img.onmanorama.com/content/dam/mm/en/food/recipe/images/2021/2/14/alfaham.jpg.transform/onm-articleimagemob/image.jpg",
     description:
       "Sumptuous delicious food baked in our cafe with curated ingredients",
-    price: 30,
+    price: 100,
   },
   {
-    title: "Red Pasta",
+    title: "Noodles",
     rating: 5,
-    imgURL: "assets/images/pasta.jpg",
+    imgURL: "http://yesofcorsa.com/wp-content/uploads/2015/08/2627_noodles.jpg",
     description:
       "Sumptuous delicious food baked in our cafe with curated ingredients",
-    price: 45,
+    price: 75,
   },
   {
-    title: "White Pasta",
+    title: "Fried Rice",
     rating: 5,
-    imgURL: "assets/images/white-pasta.jpg",
+    imgURL: "https://i2.wp.com/www.everydayeasyeats.com/wp-content/uploads/2016/06/Chinese-Fried-Rice-2.jpg?resize=680%2C1020",
     description:
       "Sumptuous delicious food baked in our cafe with curated ingredients",
-    price: 25,
+    price: 100,
   },
-  {
-    title: "French Fries",
-    rating: 4,
-    imgURL: "assets/images/shezuan.jpg",
-    description:
-      "Sumptuous delicious food baked in our cafe with curated ingredients",
-    price: 35,
-  },
+
 ];
 const bestDishesCont = document.querySelector("#best-dishes-container");
 function bestDishesHero() {
