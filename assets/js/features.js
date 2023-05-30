@@ -4,7 +4,7 @@ if (previewNavbar) {
   previewNavbar.innerHTML = `
   <div class="flex text-center jc-ai-center">
   <!-- Left Navigation -->
-    <div class="site-title flex align-item-left">
+    <div class="site-title flex align-items-left">
         <a class="logo" href="#">
           <img src="logo.png" alt="Logo">
         </a>
@@ -19,8 +19,7 @@ if (previewNavbar) {
         </div>
     </div>
     <!-- Right Navigation -->
-    <nav class="site-nav flex right-nav align-item-right"
-  >
+    <nav class="site-nav flex right-nav align-items-right">
         
             <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
             <li><a href="our-vision.html"><i class="far fa-eye"></i> Our Vision</a></li>
