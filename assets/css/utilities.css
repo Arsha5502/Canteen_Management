@@ -79,7 +79,7 @@ button {cursor: pointer;}
 .clr-black { color: #333;}
 
 /* Text Center */
-.text-center { text-align: center; margin: 0 auto; }
+.text-center { text-align: center; margin: 0; }
 /* Text Decorations */
 .underline { border-bottom: 2px solid #000; }
 
