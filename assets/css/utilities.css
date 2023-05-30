@@ -4,7 +4,7 @@
     padding: 0; overflow: auto;
 }
 
-.container-min { max-width: 1300px; margin: 0 auto; }
+.container-min { max-width: 1700px;height: auto; margin: 0; }
 
 /* Display Sections */
 .flex { display: flex; flex-wrap: wrap; }
