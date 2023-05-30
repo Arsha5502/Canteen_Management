@@ -328,9 +328,9 @@ function userFooterUI() {
                     <article class="contact">
                         <ul>
                             <h1 class="sm">Contact Information</h1>
-                            <li> <i class="fas fa-phone-alt"></i> <p></p></li>
-                            <li> <i class="fas fa-envelope"></i> <p></p></li>
-                            <li> <i class="fas fa-map-marker-alt"></i> <p></p></li>
+                            <li> <i class="fas fa-phone-alt"></i> <p>0484  2725272, 8547704139, 9495737577</p></li>
+                            <li> <i class="fas fa-envelope"></i> <p>mail@fisat.ac.in</p></li>
+                            <li> <i class="fas fa-map-marker-alt"></i> <p> Hormis Nagar, Mookkannoor P O, Angamaly, Ernakulam Dt. Kerala, India – 683 577 </p></li>
                             <li> <i class="fas fa-globe-asia"></i> <p>For Professional Courses, Visit: www.fisat.ac.in</p></li>
                         </ul>
                     </article>
