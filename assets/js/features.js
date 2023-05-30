@@ -311,8 +311,8 @@ function userFooterUI() {
                         <h1 class="sm">about</h1>
                         <p>The Federal Institute of Science and Technology (FISAT) is a self-financing private engineering college established and promoted by the Federal Bank Officers’ Association Educational Society (FBOAES). The FBOAES is an initiative of the Federal Bank Officers’ Association (FBOA), the sole representative body of all Federal Bank officers.Established in 2002, the institution is accredited by the National Assessment and Accreditation Council (NAAC) with an ‘A+’ grade in the 2nd cycle. The National Board of Accreditation (NBA) has accredited five B.Tech programmes.  FISAT is located in Mookannoor, near Angamaly in Ernakulam District, Kerala, the birthplace of The Federal Bank Ltd. founder, Late K P Hormis, and the campus is named “Hormis Nagar” in his honour.</p>
                         <ul class="py-1">
-                            <li><i class="fab fa-facebook-f"></i><a href="https://www.facebook.com/malwainstitute/" target="_blank"> Facebook</a></li>
-                            <li><i class="fab fa-instagram"></i><a href="https://www.instagram.com/malwa_institute_of_technology/" target="_blank">Instagram</a></li>
+                            <li><i class="fab fa-facebook-f"></i><a href="https://www.facebook.com/fisats/" target="_blank"> Facebook</a></li>
+                            <li><i class="fab fa-instagram"></i><a href="https://www.instagram.com/fisat.official?igshid=MzRIODBiNWFIZA==" target="_blank">Instagram</a></li>
                         </ul>
                     </article>
                     <!-- Navigation Links -->
@@ -321,18 +321,17 @@ function userFooterUI() {
                             <h1 class="sm">Quick Links</h1>
                             <li><a href="client-side.html">Menu</a></li>
                             <li><a href="user-orders.html">Your Orders</a></li>
-                            <li><a href="https://github.com/rvutd/mit-canteen-site" target="_blank">Git Repository</a></li>
-                            <li><a href="https://mitindore.co.in/" target="_blank">MIT Indore</a></li>
+                            <li><a href="https://fisat.ac.in" target="_blank">FISAT Angamaly</a></li>
                         </ul>
                     </article>
                     <!-- Contact Details -->
                     <article class="contact">
                         <ul>
                             <h1 class="sm">Contact Information</h1>
-                            <li> <i class="fas fa-phone-alt"></i> <p>+91-731-2810001-08</p></li>
-                            <li> <i class="fas fa-envelope"></i> <p>admission@mitindore.co.in</p></li>
-                            <li> <i class="fas fa-map-marker-alt"></i> <p>Indore-Dewas Bypass Road, Indore (MP)-452016</p></li>
-                            <li> <i class="fas fa-globe-asia"></i> <p>For Professional Courses, Visit: www.altius.ac.in</p></li>
+                            <li> <i class="fas fa-phone-alt"></i> <p></p></li>
+                            <li> <i class="fas fa-envelope"></i> <p></p></li>
+                            <li> <i class="fas fa-map-marker-alt"></i> <p></p></li>
+                            <li> <i class="fas fa-globe-asia"></i> <p>For Professional Courses, Visit: www.fisat.ac.in</p></li>
                         </ul>
                     </article>
                 </main>
