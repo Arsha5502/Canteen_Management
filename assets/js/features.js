@@ -8,7 +8,7 @@ if (previewNavbar) {
         <a class="logo" href="#">
           <img src="logo.png" alt="Logo">
         </a>
-        <div>
+        <div class="fisatc">
             <a href="index.html"><h1><span style= "color:#004e95; font-size:27px;">FISAT</span> <span  style="color:lightsteelblue ;font-family: timesnewroman;">Canteen</span></h1></a>
         </div>
         <!-- Toggle Bars -->
