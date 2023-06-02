@@ -7,7 +7,7 @@
 .container-min { max-width: 1700px;height: auto; margin: 0; }
 
 /* Display Sections */
-.flex { display: flex; flex-wrap: wrap; }
+.flex { display: flex; flex-wrap: wrap; justify-content: space-between;}
 
 .flex-column {
     display: flex; flex-direction: column;
@@ -91,18 +91,18 @@ button {cursor: pointer;}
 .xxl { font-size: 5rem;}
 
 /* Margin Y Axis */
-/* .my-1 { margin: 1rem auto;}
-.my-2 { margin: 2rem auto;} 
-.my-3 { margin: 3rem auto;}
-.my-4 { margin: 4rem auto;}
-.my-5 { margin: 5rem auto;} */
+ .my-1 { margin: 1rem auto;}
+/* .my-2 { margin: 2rem auto;}  */
+/* .my-3 { margin: 3rem auto;}
+.my-4 { margin: 4rem auto;} */
+.my-5 { margin: 5rem auto;} 
 
 /* Margin XY Axis */
-.m-1 { margin: 1rem;}
+/* .m-1 { margin: 1rem;}
 .m-2 { margin: 2rem;}
 .m-3 { margin: 3rem;}
 .m-4 { margin: 4rem;}
-.m-5 { margin: 5rem;}
+.m-5 { margin: 5rem;} */
 
 /* Padding Y Axis */
 .py-1 { margin: 1rem auto;}
