@@ -1045,3 +1045,35 @@ tr {
 #custom .bold {
   margin-bottom: 1.5rem;
 }
+
+
+/* payment styles.css */
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+form {
+  margin-top: 20px;
+}
+
+.form-row {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+}
+
+#card-element {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
