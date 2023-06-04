@@ -7,7 +7,7 @@
     <title>FISAT Canteen | Admin</title>
 
     <!-- Page Icon -->
-    <link rel="Micosoft icon" href="logo.png" />
+    <link rel="Micosoft icon" href="static/images/logo.png" />
 
     <!-- Font Awesome -->
     <link
@@ -18,10 +18,10 @@
     />
 
     <!-- Style Sheets -->
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/utilities.css" />
-    <link rel="stylesheet" href="assets/css/mobile.css" />
-    <link rel="stylesheet" href="assets/css/animations.css" />
+    <link rel="stylesheet" href="static/css/style.css" />
+    <link rel="stylesheet" href="static/css/utilities.css" />
+    <link rel="stylesheet" href="static/css/mobile.css" />
+    <link rel="stylesheet" href="static/css/animations.css" />
 
     <!-- Firebase Connectivity Using CDN -->
     <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
@@ -37,14 +37,15 @@
       <div class="flex text-center jc-ai-center">
         <div class="site-title flex align-item-left">
           <a class="logo" href="#">
-            <img src="logo.png" alt="Logo" />
+            <img src="static/images/logo.png" alt="Logo" />
           </a>
           <div>
-            <a href="index.html">
+            <a href="templates/index.html">
               <h1>
-                <span class="clr-blue" style="color: #004e95; font-size: 27px;">FISAT</span>
-                <span
-                style="color:lightsteelblue ;font-family: timesnewroman">
+                <span class="clr-blue" style="color: #004e95; font-size: 27px"
+                  >FISAT</span
+                >
+                <span style="color: lightsteelblue; font-family: timesnewroman">
                   Canteen Admin</span
                 >
               </h1></a
@@ -60,11 +61,9 @@
         <!-- Right Navigation -->
         <nav class="site-nav flex right-nav align-items-right">
           <ul class="flex">
-            <li><a href="order.html">Orders</a></li>
-            <li><a href="admin-side.html">Product Management</a></li>
-            <button class="btn" id="logout" >
-              Log Out
-            </button>
+            <li><a href="templates/order.html">Orders</a></li>
+            <li><a href="templates/admin-side.html">Product Management</a></li>
+            <button class="btn" id="logout">Log Out</button>
           </ul>
         </nav>
       </div>
@@ -74,8 +73,8 @@
     <header class="mob-navbar">
       <nav class="nav container">
         <ul class="mob-ul">
-          <li><a href="order.html">Orders</a></li>
-          <li><a href="admin-side.html">Product Management</a></li>
+          <li><a href="templates/order.html">Orders</a></li>
+          <li><a href="templates/admin-side.html">Product Management</a></li>
           <button class="btn" id="logout" style="padding: 10px 20px">
             Log Out
           </button>
@@ -114,6 +113,6 @@
       </div>
     </section>
 
-    <script src="assets/js/admin.js"></script>
+    <script src="static/js/admin.js"></script>
   </body>
 </html>

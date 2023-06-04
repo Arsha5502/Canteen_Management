@@ -7,7 +7,7 @@
     <title>FISAT Canteen | Menu</title>
 
     <!-- Page Icon -->
-    <link rel="Micosoft icon" href="logo.png" />
+    <link rel="Micosoft icon" href="static/images/logo.png" />
 
     <!-- Font Awesome -->
     <link
@@ -18,10 +18,10 @@
     />
 
     <!-- Style Sheets -->
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/utilities.css" />
-    <link rel="stylesheet" href="assets/css/mobile.css" />
-    <link rel="stylesheet" href="assets/css/animations.css" />
+    <link rel="stylesheet" href="static/css/style.css" />
+    <link rel="stylesheet" href="static/css/utilities.css" />
+    <link rel="stylesheet" href="static/css/mobile.css" />
+    <link rel="stylesheet" href="static/css/animations.css" />
 
     <!-- Firebase Connectivity Using CDN -->
     <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
@@ -34,22 +34,22 @@
   <body>
     <!-- NavBar -->
     <header class="navbar">
-
       <div class="flex text-center jc-ai-center">
         <!-- Left Navigation -->
         <div class="site-title flex align-item-left">
           <a class="logo" href="#">
-            <img src="logo.png" alt="Logo" />
+            <img src="static/images/logo.png" alt="Logo" />
           </a>
           <div>
-            <a href="index.html"
+            <a href="templates/index.html"
               ><h1>
                 <span style="color: #004e95; font-size: 27px">FISAT</span>
                 <span
                   style="color: lightsteelblue; font-family: 'timesnewroman;"
                   >Canteen</span
                 >
-              </h1></a>
+              </h1></a
+            >
           </div>
           <!-- Toggle Bars -->
           <div class="toggle-bars mybar">
@@ -59,16 +59,15 @@
           </div>
         </div>
         <!-- Right Navigation -->
-        <nav
-          class="site-nav flex right-nav align-items-right" >
+        <nav class="site-nav flex right-nav align-items-right">
           <ul class="flex">
             <li>
-              <a href="client-side.html"
+              <a href="templates/client-side.html"
                 ><i class="fas fa-cocktail"></i> Menu</a
               >
             </li>
             <li>
-              <a href="user-orders.html"
+              <a href="templates/user-orders.html"
                 ><i class="fas fa-coins"></i> Your Orders</a
               >
             </li>
@@ -91,8 +90,8 @@
     <header class="mob-navbar">
       <nav class="nav container">
         <ul class="mob-ul">
-          <li><a href="client-side.html">Menu</a></li>
-          <li><a href="user-orders.html">My Orders</a></li>
+          <li><a href="templates/client-side.html">Menu</a></li>
+          <li><a href="templates/user-orders.html">My Orders</a></li>
           <button class="btn" id="userlogout">Log Out</button>
           <!-- Cart Icon -->
           <a class="flex" id="cart-btn">
@@ -218,10 +217,10 @@
     </section>
 
     <!-- Menu & Admin Stuff -->
-    <script src="assets/js/main.js"></script>
+    <script src="static/js/main.js"></script>
     <!-- Creative Features -->
-    <script src="assets/js/features.js"></script>
+    <script src="static/js/features.js"></script>
     <!-- Controls User Stuff -->
-    <script src="assets/js/functioning.js"></script>
+    <script src="static/js/functioning.js"></script>
   </body>
 </html>

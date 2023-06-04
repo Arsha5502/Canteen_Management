@@ -6,10 +6,10 @@ if (previewNavbar) {
   <!-- Left Navigation -->
     <div class="site-title flex align-items-left">
         <a class="logo" href="#">
-          <img src="logo.png" alt="Logo">
+          <img src="static/images/logo.png" alt="Logo">
         </a>
         <div class="fisatc">
-            <a href="index.html"><h1><span style= "color:#004e95; font-size:27px;">FISAT</span> <span  style="color:lightsteelblue ;font-family: timesnewroman;">Canteen</span></h1></a>
+            <a href="templates/index.html"><h1><span style= "color:#004e95; font-size:27px;">FISAT</span> <span  style="color:lightsteelblue ;font-family: timesnewroman;">Canteen</span></h1></a>
         </div>
         <!-- Toggle Bars -->
         <div class="toggle-bars mybar">
@@ -21,8 +21,8 @@ if (previewNavbar) {
     <!-- Right Navigation -->
     <nav class="site-nav flex right-nav align-items-right">
         
-            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-            <li><a href="our-vision.html"><i class="far fa-eye"></i> Our Vision</a></li>
+            <li><a href="templates/index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="templates/our-vision.html"><i class="far fa-eye"></i> Our Vision</a></li>
         
 
           <div>
@@ -42,8 +42,8 @@ if (mobPreviewNavbar) {
   mobPreviewNavbar.innerHTML = `
         <nav class="nav container">
             <ul class="mob-ul">
-                <li><a href="index.html">Home</a></li> 
-                <li><a href="our-vision.html">Our Vision</a></li>
+                <li><a href="templates/index.html">Home</a></li> 
+                <li><a href="templates/our-vision.html">Our Vision</a></li>
                 <button class="btn" id="sign-modal">Log In</button>
                 <button class="btn" id="signup-modal">Sign Up</button>
             </ul>
