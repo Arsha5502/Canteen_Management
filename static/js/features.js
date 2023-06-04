@@ -182,7 +182,7 @@ if (signUpModal) {
                 <li><button><i class="fab fa-facebook" id="facebook-signUpIn"></i></button></li>
         </ul>
         <!-- Sign Up Input's -->
-        <form class="modal-form grid py-1 text-center" id="main-form" required>
+        <form class="modal-form grid py-1 text-center" id="main-form" required method="post">
             <input type="text" placeholder="Full Name" id="sign-up-full-name" required>
             <input type="email" placeholder="email id" id="sign-up-email" required>
             <input type="password" placeholder="Password" id="sign-up-password" required>
@@ -227,7 +227,7 @@ if (signModal) {
             <li><button><i class="fab fa-facebook" id="facebook-signUpIn"></i></button></li>
         </ul>
         <!-- Sign In Input's -->
-        <form class="modal-form grid py-1 text-center" id="signIn-form">
+        <form class="modal-form grid py-1 text-center" id="signIn-form" method="post">
             <input type="email" placeholder="Email Id" id="sign-in-email" required>
             <input type="password" placeholder="Password" id="sign-in-password" required>
 
