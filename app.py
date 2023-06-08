@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, url_for, redirect, session
+from flask import Flask, render_template, request, url_for, redirect, session, jsonify
 from pymongo.mongo_client import MongoClient
 import bcrypt
 #set app as a Flask instance 
@@ -6,21 +6,44 @@ app = Flask(__name__)
 #encryption relies on secret keys so they could be run
 app.secret_key = "canteen123"
 #connoct to your Mongo DB database
-uri = "mongodb+srv://admin:admin@cluster0.epqxvmj.mongodb.net"
+uri = "mongodb+srv://admin:admin@cluster0.epqxvmj.mongodb.net/"
+# cart_uri="mongodb+srv://admin:admin@cluster0.epqxvmj.mongodb.net/cart"
 
 # Create a new client and connect to the server
 client = MongoClient(uri)
 db = client.get_database('total_records')
 records = db["records"]
+# cartclient=MongoClient(cart_uri)
+# db = cartclient.get_database('cart')
+# collection = db["cart_details"]
 
-db = client['cart']
-collection = db['cart_details']
-schema = {
-    'product_id': str,
-    'name': str,
-    'price': float,
-    'quantity': int
-}
+# @app.route("/add_to_cart", methods=['POST'])
+# def add_to_cart():
+#     cart_item = request.get_json()
+#     collection.insert_one(cart_item)
+#     print(cart_item)
+#     return jsonify({'message': 'Item added to cart'})
+
+
+
+# MongoDB connection
+cart_uri = "mongodb+srv://admin:admin@cluster0.epqxvmj.mongodb.net"
+cart_client = MongoClient(cart_uri)
+db = cart_client.get_database('cart')
+collection = db["cart_details"]
+
+@app.route("/add_to_cart", methods=['POST'])
+def add_to_cart():
+    try:
+        cart_item = request.get_json()
+        collection.insert_one(cart_item)
+        print(cart_item)
+        return jsonify({'message': 'Item added to cart'})
+    except Exception as e:
+        print("Error adding item to cart:", str(e))
+        return jsonify({'error': 'Failed to add item to cart'})
+
+
 
 # @app.route('/client-side.html')
 # def client_side():

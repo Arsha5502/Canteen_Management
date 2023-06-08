@@ -26,7 +26,7 @@ if (previewNavbar) {
         
 
           <div>
-            <button  class="btn" id="sign-modal">Log In</button>
+            <button  class="btn" onclick="window.location.href = 'welcome'; id="sign-modal">Log In</button>
             <button  class="btn" id="signup-modal">Sign Up</button>
           </div>
         
@@ -214,7 +214,7 @@ if (signUpModal) {
 if (signModal) {
   signIn_UI = signModal.innerHTML = `
     <!-- Main Card -->
-    <div class="modal-container">
+    <div class="modal-container" style="margin-top:-50;">
         <!-- Written Stuff -->
         <div class="modal-content">
             <div class="md">Welcome back!</div>

@@ -136,8 +136,8 @@ section {
 
 /* ------------------- SignIn Modal ---------*/
 .sign-modal {
-  padding-top: 100px;
-  visibility: hidden;
+  /* padding-top: 100px; */
+  visibility:hidden;
   position: fixed;
   left: 0;
   top: 0;
@@ -148,9 +148,9 @@ section {
 }
 
 .modal-container {
-  position: absolute;
+  position:relative;
   left: 50%;
-  top: 45%;
+  margin-top: 20%;
   overflow: visible;
   transform: translate(-50%, -50%);
   display: grid;
@@ -159,7 +159,7 @@ section {
   padding: 20px 40px;
   font-family: Helvetica, sans-serif;
   background-color: #ffffff;
-  box-shadow: rgba(15, 167, 238, 0.76) 0px 22px 70px 4px;
+  box-shadow: rgba(61, 47, 32, 0.76) 0px 22px 70px 4px;
 }
 
 .modal-content {
@@ -319,7 +319,7 @@ span {
 /* ------------- Home Page CSS -------------- */ 
 /* Navbar */
 .navbar {
-  background: #1c1210;
+  background: #0e0f09;
   margin: 0;
   margin-right: 0;
   height: 80px;

@@ -320,7 +320,7 @@ function displayMenuItems(menuItems) {
             <div class="menu-cart-functionality">
                 <div class="price">&#8377;${item.fields.price}</div>
                 <div class="cart-btn-container">
-                    <button class="bag-btn" id="add-to-cart-btn" data-id=${item.sys.id}>Add to Cart</i></button>
+                    <button class="bag-btn" id="add-to-cart-btn" onClick="addToCart()" data-id=${item.sys.id}>Add to Cart</i></button>
                 </div>
             </div>
             </div>
@@ -332,7 +332,90 @@ function displayMenuItems(menuItems) {
   if (menuSection) {
     menuSection.innerHTML = displayMenu;
   }
+
 }
+//add function
+// function addToCart(itemId, itemTitle, quantity, totalAmount) {
+//     let userId = "user"; // Replace with the actual user ID
+//     let cartId = "cart"; // Replace with the actual cart ID
+  
+//     // Create an object with the cart item details
+//     let cartItem = {
+//       userId: userId,
+//       cartId: cartId,
+//       foodItem: item.fields.title,
+//       totalAmount: item.fields.price
+//     };
+  
+//     // Send an AJAX request to your server to save the cart item
+//     // Example using fetch:
+//     fetch("/add_to_cart", {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//       body: JSON.stringify(cartItem),
+//     })
+//       .then(function (response) {
+//         // Handle the response from the server
+//         if (response.ok) {
+//           // Item added to cart successfully
+//           alert("Item added to cart!");
+//         } else {
+//           // Error occurred while adding item to cart
+//           alert("Error adding item to cart. Please try again.");
+//         }
+//       })
+//       .catch(function (error) {
+//         // Error occurred while making the request
+//         console.error("Error:", error);
+//         alert("An error occurred. Please try again later.");
+//       });
+// }
+
+function addToCart(itemId, itemTitle, quantity, totalAmount) {
+  let userId = "user"; // Replace with the actual user ID
+  let cartId = "cart"; // Replace with the actual cart ID
+  var element = document.getElementById("item");
+  var itemname = element.innerHTML;
+  var element = document.getElementById("price");
+  var price = element.innerHTML;
+  // Create an object with the cart item details
+  let cartItem = {
+    userId: userId,
+    cartId: cartId,
+    foodItem: itemname,
+    totalAmount: price
+  };
+
+  // Send an AJAX request to your server to save the cart item
+  // Example using fetch:
+  fetch("/add_to_cart", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(cartItem),
+  })
+    .then(function (response) {
+      // Handle the response from the server
+      if (response.ok) {
+        // Item added to cart successfully
+        alert("Item added to cart!");
+      } else {
+        // Error occurred while adding item to cart
+        alert("Error adding item to cart. Please try again.");
+      }
+    })
+    .catch(function (error) {
+      // Error occurred while making the request
+      console.error("Error:", error);
+      alert("An error occurred. Please try again later.");
+    });
+}
+
+
+
 
 // ------------------ Menu.html Menu Cards END ------------------------
 
@@ -698,3 +781,4 @@ function ClientDataFlow(addToCartBtn) {
     }
   });
 }
+
