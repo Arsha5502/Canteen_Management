@@ -13,6 +13,10 @@ client = MongoClient(uri)
 db = client.get_database('total_records')
 records = db["records"]
 
+@app.route('/client-side.html')
+def client_side():
+    return "This is Client Side"
+
 @app.route("/", methods=['post', 'get'])
 def index():
     message = ''
@@ -70,23 +74,23 @@ def login():
             #encode the password and check if it matches
             if bcrypt.checkpw(password.encode('utf-8'), passwordcheck):
                 session["email"] = email_val
-                return redirect(url_for('client-side'))
+                return redirect(url_for('client_side'))
             else:
                 if "email" in session:
-                    return redirect(url_for("client-side"))
+                    return redirect(url_for("client_side"))
                 message = 'Wrong password'
-                return render_template('client-side.html', message=message)
+                return render_template('index.html', message=message)
         else:
             message = 'Email not found'
-            return render_template('client-side.html', message=message)
-    return render_template('client-side.html', message=message)
+            return render_template('index.html', message=message)
+    return render_template('index.html', message=message)
 
 def logged_in():
     if "email" in session:
         email = session["email"]
         return render_template('client-side.html', email=email)
     else:
-        return redirect(url_for("client-side"))
+        return redirect(url_for("client_side"))
 
 
 def logout():
