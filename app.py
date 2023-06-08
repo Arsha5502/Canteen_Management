@@ -4,7 +4,7 @@ import bcrypt
 #set app as a Flask instance 
 app = Flask(__name__)
 #encryption relies on secret keys so they could be run
-# app.secret_key = ""
+app.secret_key = "canteen123"
 #connoct to your Mongo DB database
 uri = "mongodb+srv://admin:admin@cluster0.epqxvmj.mongodb.net"
 
@@ -13,11 +13,23 @@ client = MongoClient(uri)
 db = client.get_database('total_records')
 records = db["records"]
 
-@app.route('/client-side.html')
-def client_side():
-    return "This is Client Side"
+db = client['cart']
+collection = db['cart_details']
+schema = {
+    'product_id': str,
+    'name': str,
+    'price': float,
+    'quantity': int
+}
 
-@app.route("/", methods=['post', 'get'])
+# @app.route('/client-side.html')
+# def client_side():
+#     return render_template('client-side.html')
+
+@app.route("/", methods=['POST', 'GET'])
+
+
+
 def index():
     message = ''
     #if method post in index
@@ -57,45 +69,87 @@ def index():
  
     return render_template('index.html')
     
+# def login():
+#     message = 'Please login to your account'
+#     if "email" in session:
+#         return redirect(url_for('client_side'))
+
+#     if request.method == "POST":
+#         print(request.form)
+#         email = request.form.get("email")
+#         password = request.form.get("password")
+#         print(email)
+#         print(password)
+
+#         #check if email exists in database
+#         email_found = records.find_one({"email": email})
+#         if email_found:
+#             email_val = email_found['email']
+#             passwordcheck = email_found['password']
+#             #encode the password and check if it matches
+#             if bcrypt.checkpw(password.encode('utf-8'), passwordcheck):
+#                 session["email"] = email_val
+#                 return redirect(url_for('client_side'))
+#             else:
+#                 if "email" in session:
+#                     return redirect(url_for("client_side"))
+#                 message = 'Wrong password'
+#                 return render_template('index.html', message=message)
+#         else:
+#             message = 'Email not found'
+#             return render_template('index.html', message=message)
+#     return render_template('client-side.html', message=message)
+
+
+# def logged_in():
+#     if "email" in session:
+#         email = session["email"]
+#         return render_template('client-side.html', email=email)
+#     else:
+#         return redirect(url_for("client_side"))
+
+
+@app.route("/login", methods=['POST','GET'])
 def login():
     message = 'Please login to your account'
-    if "email" in session:
-        return redirect(url_for({}))
+    # if "email" in session:
+    #     return render_template('client-side.html')
 
     if request.method == "POST":
+        print(request.form)
         email = request.form.get("email")
         password = request.form.get("password")
+        print(email)
+        print(password)
 
         #check if email exists in database
         email_found = records.find_one({"email": email})
+        print("email found", email_found)
         if email_found:
             email_val = email_found['email']
+            print(email_val)
             passwordcheck = email_found['password']
+            print(passwordcheck)
             #encode the password and check if it matches
-            if bcrypt.checkpw(password.encode('utf-8'), passwordcheck):
+            if password==passwordcheck:
                 session["email"] = email_val
-                return redirect(url_for('client_side'))
+                print("Validation Successful")
+                return render_template('client-side.html')
             else:
                 if "email" in session:
-                    return redirect(url_for("client_side"))
+                    return render_template('client-side.html')
                 message = 'Wrong password'
+                print(message)
                 return render_template('index.html', message=message)
         else:
             message = 'Email not found'
             return render_template('index.html', message=message)
     return render_template('index.html', message=message)
 
-def logged_in():
-    if "email" in session:
-        email = session["email"]
-        return render_template('client-side.html', email=email)
-    else:
-        return redirect(url_for("client_side"))
-
 
 def logout():
     session.pop("email", None)
-    return render_template("signout.html")
+    return render_template("index.html")
 
 
 

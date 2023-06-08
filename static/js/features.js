@@ -227,9 +227,9 @@ if (signModal) {
             <li><button><i class="fab fa-facebook" id="facebook-signUpIn"></i></button></li>
         </ul>
         <!-- Sign In Input's -->
-        <form class="modal-form grid py-1 text-center" name="email" method="post">
-            <input type="email" placeholder="Email Id" name="password" required>
-            <input type="password" placeholder="Password" id="sign-in-password" required>
+        <form action="/" class="modal-form grid py-1 text-center"  method="POST">
+            <input type="email" placeholder="Email Id" name="email" required>
+            <input type="password" placeholder="Password" id="sign-in-password"  name="password" required>
 
             <button type="submit" class="btn">Login</button>
         </form>
@@ -249,7 +249,7 @@ if (signModal) {
             </a>
         </div>
     </div>
-`;
+` ;
 }
 
 // Home/Vision Footer

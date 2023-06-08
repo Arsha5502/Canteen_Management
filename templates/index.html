@@ -48,7 +48,42 @@
     <section class="signup-modal"><!-- Comes From Js File --></section>
 
     <!-- Modal LogIn -->
-    <section class="sign-modal"><!-- Comes From Js File --></section>
+    <section ><div class="modal-container">
+      <!-- Written Stuff -->
+      <div class="modal-content">
+          <div class="md">Welcome back!</div>
+          <div><i onclick="signModal.classList.remove('show');" class="fas fa-times"></i></div>
+      </div>
+      <!-- Other way of LogIn's -->
+      <ul class="modal-icons flex">
+          <li><button><i class="fab fa-google" id="google-signUpIn"></i></button></li>
+          <li><button><i class="fab fa-github" id="github-signUpIn"></i></button></li>
+          <li><button><i class="fab fa-facebook" id="facebook-signUpIn"></i></button></li>
+      </ul>
+      <!-- Sign In Input's -->
+      <form action="/login" class="modal-form grid py-1 text-center"  method="POST">
+          <input type="email" placeholder="Email Id" name="email" required>
+          <input type="password" placeholder="Password" id="sign-in-password"  name="password" required>
+
+          <button type="submit" class="btn">Login</button>
+      </form>
+      <!-- Remember Me CheckBox -->
+      <label class="text-center">
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+      <!-- Written Stuff -->
+      <div class="modal-content m-content-2 py-1">
+          Click “Sign In” to agree to Terms of Service and acknowledge 
+          that Privacy Policy applies to you. No account? 
+          <a id="signup-modal" 
+              onclick="signModal.classList.remove('show');
+                       signUpModal.classList.add('show');" 
+              style="cursor: pointer;">
+              <span class="clr-green">Create one</span>
+          </a>
+      </div>
+  </div>
+</section>
 
     <!-- Hero Section -->
 
