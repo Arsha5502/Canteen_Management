@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, url_for, redirect, session, jsonify
 from pymongo.mongo_client import MongoClient
 import bcrypt
-# import certifi
+import certifi
 #set app as a Flask instance 
 app = Flask(__name__)
 #encryption relies on secret keys so they could be run
@@ -11,8 +11,8 @@ uri = "mongodb+srv://admin:admin@cluster0.epqxvmj.mongodb.net/"
 # cart_uri="mongodb+srv://admin:admin@cluster0.epqxvmj.mongodb.net/cart"
 
 # Create a new client and connect to the server
-client = MongoClient(uri)
-# client = MongoClient(uri,tlsCAFile=certifi.where())
+# client = MongoClient(uri)
+client = MongoClient(uri,tlsCAFile=certifi.where())
 db = client.get_database('total_records')
 records = db["records"]
 # cartclient=MongoClient(cart_uri)
@@ -30,8 +30,8 @@ records = db["records"]
 
 # MongoDB connection
 cart_uri = "mongodb+srv://admin:admin@cluster0.epqxvmj.mongodb.net"
-# cart_client = MongoClient(cart_uri,tlsCAFile=certifi.where())
-cart_client = MongoClient(cart_uri)
+cart_client = MongoClient(cart_uri,tlsCAFile=certifi.where())
+# cart_client = MongoClient(cart_uri)
 db = cart_client.get_database('cart')
 collection = db["cart_details"]
 
@@ -141,7 +141,7 @@ def logout():
 #         return redirect(url_for("client_side"))
 
 
-@app.route("/login", methods=['POST','GET'])
+@app.route("/client-side.html", methods=['POST','GET'])
 def login():
     message = 'Please login to your account'
     # if "email" in session:
@@ -180,9 +180,11 @@ def login():
 
 
 # def logout():
-#     session.pop("email", None)
+#     session.pop("email", None).
 #     return render_template("index.html")
-
+@app.route('/logout')
+def logout():
+    return render_template('/index.html')
 
 
 
