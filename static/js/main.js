@@ -380,13 +380,40 @@ function addToCart(itemId, itemTitle, quantity, totalAmount) {
   var itemname = element.innerHTML;
   var element = document.getElementById("price");
   var price = element.innerHTML;
+
+  var element = document.getElementById("item1");
+  var itemname = element.innerHTML;
+  var element = document.getElementById("price1");
+  var price = element.innerHTML;
+
+  var element = document.getElementById("item2");
+  var itemname = element.innerHTML;
+  var element = document.getElementById("price2");
+  var price = element.innerHTML;
   // Create an object with the cart item details
   let cartItem = {
     userId: userId,
     cartId: cartId,
     foodItem: itemname,
+    totalAmount: price,
+
+    userId: userId,
+    cartId: cartId,
+    foodItem: itemname,
+    totalAmount: price,
+
+    userId: userId,
+    cartId: cartId,
+    foodItem: itemname,
     totalAmount: price
+
+
   };
+
+
+
+
+  
 
   // Send an AJAX request to your server to save the cart item
   // Example using fetch:
