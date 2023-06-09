@@ -22,7 +22,7 @@ if (previewNavbar) {
     <nav class="site-nav flex right-nav align-items-right">
         
             <li><a href="/index.html"><i class="fas fa-home"></i> Home</a></li>
-            <li><a href="/our-vision.html"><i class="far fa-eye"></i> Our Vision</a></li>
+            <!-- <li><a href="/our-vision.html"><i class="far fa-eye"></i> Our Vision</a></li> -->
         
 
           <div>
@@ -43,7 +43,7 @@ if (mobPreviewNavbar) {
         <nav class="nav container">
             <ul class="mob-ul">
                 <li><a href="/index.html">Home</a></li> 
-                <li><a href="/our-vision.html">Our Vision</a></li>
+                <!-- <li><a href="/our-vision.html">Our Vision</a></li> -->
                 <button class="btn" id="sign-modal">Log In</button>
                 <button class="btn" id="signup-modal">Sign Up</button>
             </ul>
