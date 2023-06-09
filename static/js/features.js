@@ -6,10 +6,10 @@ if (previewNavbar) {
   <!-- Left Navigation -->
     <div class="site-title flex align-items-left">
         <a class="logo" href="#">
-          <img src="static/images/logo.png" alt="Logo">
+          <img src="static/images/logo2-removebg-preview.png" alt="Logo">
         </a>
         <div class="fisatc">
-            <a href="templates/index.html"><h1><span style= "color:#004e95; font-size:27px;">FISAT</span> <span  style="color:lightsteelblue ;font-family: timesnewroman;">Canteen</span></h1></a>
+            <a href="/index.html"><h1><span style= "color:#b16c23; font-size:40px; font-family:audrey;"><b>ZEST</b></span> <span  style="color:lightsteelblue ;font-family: timesnewroman;">The flavour of mind</span></h1></a>
         </div>
         <!-- Toggle Bars -->
         <div class="toggle-bars mybar">
@@ -21,8 +21,8 @@ if (previewNavbar) {
     <!-- Right Navigation -->
     <nav class="site-nav flex right-nav align-items-right">
         
-            <li><a href="templates/index.html"><i class="fas fa-home"></i> Home</a></li>
-            <li><a href="templates/our-vision.html"><i class="far fa-eye"></i> Our Vision</a></li>
+            <li><a href="/index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="/our-vision.html"><i class="far fa-eye"></i> Our Vision</a></li>
         
 
           <div>
@@ -42,8 +42,8 @@ if (mobPreviewNavbar) {
   mobPreviewNavbar.innerHTML = `
         <nav class="nav container">
             <ul class="mob-ul">
-                <li><a href="templates/index.html">Home</a></li> 
-                <li><a href="templates/our-vision.html">Our Vision</a></li>
+                <li><a href="/index.html">Home</a></li> 
+                <li><a href="/our-vision.html">Our Vision</a></li>
                 <button class="btn" id="sign-modal">Log In</button>
                 <button class="btn" id="signup-modal">Sign Up</button>
             </ul>
@@ -176,11 +176,11 @@ if (signUpModal) {
             <div><i onclick="signUpModal.classList.remove('show');" class="fas fa-times"></i></div>
         </div>
         <!-- Other way of LogIn's -->
-        <ul class="modal-icons flex">
+        <!--ul class="modal-icons flex">
                 <li><button><i class="fab fa-google" id="google-signUpIn"></i></button></li>
                 <li><button><i class="fab fa-github" id="github-signUpIn"></i></button></li>
                 <li><button><i class="fab fa-facebook" id="facebook-signUpIn"></i></button></li>
-        </ul>
+        </ul-->
         <!-- Sign Up Input's -->
         <form class="modal-form grid py-1 text-center" id="main-form" required method="post">
             <input type="text" placeholder="Full Name" name="fullname" required>
@@ -221,11 +221,11 @@ if (signModal) {
             <div><i onclick="signModal.classList.remove('show');" class="fas fa-times"></i></div>
         </div>
         <!-- Other way of LogIn's -->
-        <ul class="modal-icons flex">
-            <li><button><i class="fab fa-google" id="google-signUpIn"></i></button></li>
-            <li><button><i class="fab fa-github" id="github-signUpIn"></i></button></li>
-            <li><button><i class="fab fa-facebook" id="facebook-signUpIn"></i></button></li>
-        </ul>
+        <!-- ul class="modal-icons flex">
+             <li><button><i class="fab fa-google" id="google-signUpIn"></i></button></li>
+             <li><button><i class="fab fa-github" id="github-signUpIn"></i></button></li>
+             <li><button><i class="fab fa-facebook" id="facebook-signUpIn"></i></button></li>
+        </ul-->
         <!-- Sign In Input's -->
         <form action="/" class="modal-form grid py-1 text-center"  method="POST">
             <input type="email" placeholder="Email Id" name="email" required>

@@ -157,22 +157,39 @@ def login():
         #check if email exists in database
         email_found = records.find_one({"email": email})
         print("email found", email_found)
+        
         if email_found:
             email_val = email_found['email']
             print(email_val)
-            passwordcheck = email_found['password']
-            print(passwordcheck)
-            #encode the password and check if it matches
-            if password==passwordcheck:
-                session["email"] = email_val
-                print("Validation Successful")
-                return render_template('client-side.html')
+            if(email_val=='admin@gmail.com'):
+                passwordcheck = email_found['password']
+                print(passwordcheck)
+                #encode the password and check if it matches
+                if password==passwordcheck:
+                    session["email"] = email_val
+                    print("Validation Successful")
+                    return render_template('admin-side.html')
+                else:
+                    if "email" in session:
+                        return render_template('admin-side.html')
+                    message = 'Wrong password'
+                    print(message)
+                    return render_template('index.html', message=message)
+                    
             else:
-                if "email" in session:
+                passwordcheck = email_found['password']
+                print(passwordcheck)
+            #encode the password and check if it matches
+                if password==passwordcheck:
+                    session["email"] = email_val
+                    print("Validation Successful")
                     return render_template('client-side.html')
-                message = 'Wrong password'
-                print(message)
-                return render_template('index.html', message=message)
+                else:
+                    if "email" in session:
+                        return render_template('client-side.html')
+                    message = 'Wrong password'
+                    print(message)
+                    return render_template('index.html', message=message)
         else:
             message = 'Email not found'
             return render_template('index.html', message=message)
@@ -184,11 +201,22 @@ def login():
 #     return render_template("index.html")
 @app.route('/logout')
 def logout():
-    return render_template('/index.html')
+    return render_template('index.html')
 
 
+@app.route('/index.html')
+def home():
+    return render_template('index.html')
+def logout():
+    return render_template('index.html')
 
+@app.route('/our-vision.html')
+def our_vision():
+    return render_template('our-vision.html')
 
+@app.route('/admin-side.html')
+def admin():
+    return render_template('admin-side.html')
 
 if __name__=="__main__":
     app.run(debug=True)
