@@ -441,7 +441,9 @@ function addToCart(itemId, itemTitle, quantity, totalAmount) {
     });
 }
 
-
+function logout(){
+  windows.location.href='/';
+}
 
 
 // ------------------ Menu.html Menu Cards END ------------------------
