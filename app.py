@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request, url_for, redirect, session, jsonify
 from pymongo.mongo_client import MongoClient
 import bcrypt
-# import certifi
 #set app as a Flask instance 
 app = Flask(__name__)
 #encryption relies on secret keys so they could be run
@@ -12,7 +11,6 @@ uri = "mongodb+srv://admin:admin@cluster0.epqxvmj.mongodb.net/"
 
 # Create a new client and connect to the server
 client = MongoClient(uri)
-# client = MongoClient(uri,tlsCAFile=certifi.where())
 db = client.get_database('total_records')
 records = db["records"]
 # cartclient=MongoClient(cart_uri)
@@ -217,6 +215,10 @@ def our_vision():
 @app.route('/admin-side.html')
 def admin():
     return render_template('admin-side.html')
+
+@app.route('/user-orders.html')
+def user_orders():
+    return render_template('user-orders.html')
 
 if __name__=="__main__":
     app.run(debug=True)

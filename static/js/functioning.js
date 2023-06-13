@@ -252,54 +252,54 @@ function makeUserDataID(userEmailID){
   return userDataID
 }*/
 
-const { MongoClient } = require('mongodb');
+// const { MongoClient } = require('mongodb');
 
-const mongoURI = 'mongodb+srv://admin: admin@cluster0.epqxvmj.mongodb.net/?retryWrites=true&w=majority'; // Replace with your MongoDB connection URI
-const dbName = 'FISAT Cafeteria'; // Replace with your MongoDB database name
+// const mongoURI = 'mongodb+srv://admin: admin@cluster0.epqxvmj.mongodb.net/?retryWrites=true&w=majority'; // Replace with your MongoDB connection URI
+// const dbName = 'FISAT Cafeteria'; // Replace with your MongoDB database name
 
-// Function to save user data to MongoDB
-async function saveUserToMongoDB(userName, email, password, phoneNumber) {
-  try {
-    const client = new MongoClient(mongoURI, { useUnifiedTopology: true });
-    await client.connect();
+// // Function to save user data to MongoDB
+// async function saveUserToMongoDB(userName, email, password, phoneNumber) {
+//   try {
+//     const client = new MongoClient(mongoURI, { useUnifiedTopology: true });
+//     await client.connect();
 
-    console.log('Connected to MongoDB');
+//     console.log('Connected to MongoDB');
 
-    const db = client.db(dbName);
+//     const db = client.db(dbName);
 
-    // Save user data to MongoDB collection
-    const userDataCollection = db.collection('User_Data');
-    await userDataCollection.insertOne({
-      User_Name: userName,
-      Email: email,
-      Password: password,
-      Phone_Number: phoneNumber,
-    });
+//     // Save user data to MongoDB collection
+//     const userDataCollection = db.collection('User_Data');
+//     await userDataCollection.insertOne({
+//       User_Name: userName,
+//       Email: email,
+//       Password: password,
+//       Phone_Number: phoneNumber,
+//     });
 
-    console.log('User data saved to MongoDB');
-    client.close();
-    console.log('Disconnected from MongoDB');
-  } catch (error) {
-    console.error('Error connecting to MongoDB:', error);
-  }
-}
+//     console.log('User data saved to MongoDB');
+//     client.close();
+//     console.log('Disconnected from MongoDB');
+//   } catch (error) {
+//     console.error('Error connecting to MongoDB:', error);
+//   }
+// }
 
-// Update the signUpMethods class
-class signUpMethods {
-  // ...
+// // Update the signUpMethods class
+// class signUpMethods {
+//   // ...
 
-  // Save Data to MongoDB
-  static async saveUserToMongoDB(userName, email, password, phoneNumber) {
-    try {
-      await saveUserToMongoDB(userName, email, password, phoneNumber);
-      Swal.fire({
-        icon: 'success',
-        title: 'Account Created Successfully. Please Log In To order Delicious Cuisine',
-      });
-    } catch (error) {
-      Swal.fire("" + error);
-    }
-  }
+//   // Save Data to MongoDB
+//   static async saveUserToMongoDB(userName, email, password, phoneNumber) {
+//     try {
+//       await saveUserToMongoDB(userName, email, password, phoneNumber);
+//       Swal.fire({
+//         icon: 'success',
+//         title: 'Account Created Successfully. Please Log In To order Delicious Cuisine',
+//       });
+//     } catch (error) {
+//       Swal.fire("" + error);
+//     }
+//   }
 
-  // ...
-}
+//   // ...
+// }
