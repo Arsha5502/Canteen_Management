@@ -29,9 +29,9 @@ records = db["records"]
 
 
 # MongoDB connection
-cart_uri = "mongodb+srv://admin:admin@cluster0.epqxvmj.mongodb.net"
+# cart_uri = "mongodb+srv://admin:admin@cluster0.epqxvmj.mongodb.net"
 # cart_client = MongoClient(cart_uri,tlsCAFile=certifi.where())
-cart_client = MongoClient(cart_uri)
+cart_client = MongoClient(uri)
 db = cart_client.get_database('cart')
 collection = db["cart_details"]
 
