@@ -445,6 +445,11 @@ function logout(){
   windows.location.href='/';
 }
 
+function options(){
+  const element = document.getElementById("menu_details");
+  element.scrollIntoView();
+}
+
 
 // ------------------ Menu.html Menu Cards END ------------------------
 

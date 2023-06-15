@@ -76,10 +76,12 @@ def index():
         email_found = records.find_one({"email": email})
         
         if email_found != None:
-            message = 'This email already exists in database'
+            # message = 'This email already exists in database'
+            return jsonify({'message': 'This email already exists in database'})
             return render_template('index.html', message=message)
         if password1 != password2:
-            message = 'Passwords should match!'
+            # message = 'Passwords should match!'
+            return jsonify({'message': 'Passwords should match!'})
         else:
             #hash the password and encode it
             #assing them in a dictionary in key value pairs
@@ -170,7 +172,8 @@ def login():
                 else:
                     if "email" in session:
                         return render_template('admin-side.html')
-                    message = 'Wrong password'
+                    # message = 'Wrong password'
+                    return jsonify({'message': 'Wrong password'})
                     print(message)
                     return render_template('index.html', message=message)
                     
@@ -185,11 +188,13 @@ def login():
                 else:
                     if "email" in session:
                         return render_template('client-side.html')
-                    message = 'Wrong password'
+                    # message = 'Wrong password'
                     print(message)
+                    return jsonify({'message': 'Wrong password'})
                     return render_template('index.html', message=message)
         else:
             message = 'Email not found'
+            return jsonify({'message':'Email not found'})
             return render_template('index.html', message=message)
     return render_template('index.html', message=message)
 
