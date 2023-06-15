@@ -45,7 +45,6 @@ def add_to_cart():
         return jsonify({'error': 'Failed to add item to cart'})
 
 
-
 @app.route('/client-side.html')
 def client_side():
     return render_template('client-side.html')
@@ -76,12 +75,10 @@ def index():
         email_found = records.find_one({"email": email})
         
         if email_found != None:
-            # message = 'This email already exists in database'
-            return jsonify({'message': 'This email already exists in database'})
+            message = 'This email already exists in database'
             return render_template('index.html', message=message)
         if password1 != password2:
-            # message = 'Passwords should match!'
-            return jsonify({'message': 'Passwords should match!'})
+            message = 'Passwords should match!'
         else:
             #hash the password and encode it
             #assing them in a dictionary in key value pairs
@@ -168,12 +165,11 @@ def login():
                 if password==passwordcheck:
                     session["email"] = email_val
                     print("Validation Successful")
-                    return render_template('admin-side.html')
+                    return redirect(url_for('admin'))
                 else:
                     if "email" in session:
                         return render_template('admin-side.html')
-                    # message = 'Wrong password'
-                    return jsonify({'message': 'Wrong password'})
+                    message = 'Wrong password'
                     print(message)
                     return render_template('index.html', message=message)
                     
@@ -188,15 +184,14 @@ def login():
                 else:
                     if "email" in session:
                         return render_template('client-side.html')
-                    # message = 'Wrong password'
+                    message = 'Wrong password'
                     print(message)
-                    return jsonify({'message': 'Wrong password'})
                     return render_template('index.html', message=message)
         else:
             message = 'Email not found'
-            return jsonify({'message':'Email not found'})
             return render_template('index.html', message=message)
     return render_template('index.html', message=message)
+
 
 
 # def logout():
@@ -219,6 +214,10 @@ def our_vision():
 
 @app.route('/admin-side.html')
 def admin():
+    return render_template('admin-side.html')
+
+@app.route('/admin')
+def admina():
     return render_template('admin-side.html')
 
 @app.route('/user-orders.html')
