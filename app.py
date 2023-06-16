@@ -171,7 +171,7 @@ def login():
                 if password==passwordcheck:
                     session["email"] = email_val
                     print("Validation Successful")
-                    return render_template('admin-side.html')
+                    return redirect(url_for('admin'))
                 else:
                     if "email" in session:
                         return render_template('admin-side.html')
@@ -199,6 +199,7 @@ def login():
     return render_template('index.html', message=message)
 
 
+
 # def logout():
 #     session.pop("email", None).
 #     return render_template("index.html")
@@ -219,6 +220,10 @@ def our_vision():
 
 @app.route('/admin-side.html')
 def admin():
+    return render_template('admin-side.html')
+
+@app.route('/admin')
+def admina():
     return render_template('admin-side.html')
 
 @app.route('/user-orders.html')
