@@ -7,7 +7,7 @@ app = Flask(__name__)
 app.secret_key = "canteen123"
 #connoct to your Mongo DB database
 uri = "mongodb+srv://admin:admin@cluster0.epqxvmj.mongodb.net/"
-# cart_uri="mongodb+srv://admin:admin@cluster0.epqxvmj.mongodb.net/cart"
+cart_uri="mongodb+srv://admin:admin@cluster0.epqxvmj.mongodb.net/cart"
 
 # Create a new client and connect to the server
 client = MongoClient(uri)
@@ -23,15 +23,15 @@ records = db["records"]
 #     collection.insert_one(cart_item)
 #     print(cart_item)
 #     return jsonify({'message': 'Item added to cart'})
-
-
-
 # MongoDB connection
 # cart_uri = "mongodb+srv://admin:admin@cluster0.epqxvmj.mongodb.net"
-# cart_client = MongoClient(cart_uri,tlsCAFile=certifi.where())
-cart_client = MongoClient(uri)
+
+cart_client = MongoClient(cart_uri)
 db = cart_client.get_database('cart')
 collection = db["cart_details"]
+collection = db["menu_items"]
+
+
 
 @app.route("/add_to_cart", methods=['POST'])
 def add_to_cart():
@@ -40,10 +40,42 @@ def add_to_cart():
         collection.insert_one(cart_item)
         print(cart_item)
         return jsonify({'message': 'Item added to cart'})
+    
     except Exception as e:
         print("Error adding item to cart:", str(e))
         return jsonify({'error': 'Failed to add item to cart'})
+    
 
+@app.route("/add_product", methods=['POST'])
+def add_product():
+    try:
+        product = request.form['product']
+        category = request.form['category']
+        price = request.form['price']
+        
+        # Create a new product document
+        new_product = {
+            'product': product,
+            'category': category,
+            'price': price
+        }
+        
+        # Connect to the MongoDB server
+        cart_client = MongoClient(cart_uri)
+        db = cart_client['cart']
+        collection = db['menu_items']
+        
+        # Insert the new product into the collection
+        collection.insert_one(new_product)
+        
+        # Close the MongoDB connection
+        cart_client.close()
+        
+        return jsonify({'message': 'Product added to menu'})
+    
+    except Exception as e:
+        print("Error adding product to menu:", str(e))
+        return jsonify({'error': 'Failed to add product to menu'})
 
 
 

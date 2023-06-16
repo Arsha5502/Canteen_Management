@@ -568,7 +568,7 @@ function cartFunctionalities(addItem, trimedEmailID, addToCartBtn) {
       addItem.forEach((item) => {
         if (item.FoodID === id) {
           addItem.splice(addItem.indexOf(item), 1);
-          if (window.location != "http://127.0.0.1:5502/user-orders.html") {
+          if (window.location != "/user-orders.html") {
             // Enable removed items btn
             addToCartBtn[item.FoodID - 1].disabled = false;
             addToCartBtn[item.FoodID - 1].innerHTML = "Add to Cart";
@@ -632,7 +632,7 @@ function cartFunctionalities(addItem, trimedEmailID, addToCartBtn) {
           if (item.Quantity === 0) {
             if (
               window.location !=
-              "https://mit-canteen.netlify.app/user-orders.html"
+              "templates/user-orders.html"
             ) {
               // Enable Buttons - so user can use them again
               // Enable removed items btn
