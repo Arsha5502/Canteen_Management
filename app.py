@@ -46,6 +46,11 @@ def add_to_cart():
 
 
 
+
+
+
+
+
 @app.route('/client-side.html')
 def client_side():
     return render_template('client-side.html')
