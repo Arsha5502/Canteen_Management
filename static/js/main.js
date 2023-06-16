@@ -450,15 +450,7 @@ function options() {
   element.scrollIntoView();
 }
 
-// function addtomenu() {
-//   const element = document.getElementById("add_to_menu");
-//   element.scrollIntoView();
-// }
 
-// function removefrommenu() {
-//   const element = document.getElementById("remove_from_menu");
-//   element.scrollIntoView();
-// }
 
 
 

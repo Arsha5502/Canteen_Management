@@ -45,6 +45,7 @@ def add_to_cart():
         return jsonify({'error': 'Failed to add item to cart'})
 
 
+
 @app.route('/client-side.html')
 def client_side():
     return render_template('client-side.html')
