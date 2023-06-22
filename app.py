@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, url_for, redirect, session, jsonify
+from flask import Flask, render_template,json, request, url_for, redirect, session, jsonify
 from pymongo.mongo_client import MongoClient
 import bcrypt
 #set app as a Flask instance 
@@ -13,9 +13,11 @@ cart_uri="mongodb+srv://admin:admin@cluster0.epqxvmj.mongodb.net/cart"
 client = MongoClient(uri)
 db = client.get_database('total_records')
 records = db["records"]
-# cartclient=MongoClient(cart_uri)
-# db = cartclient.get_database('cart')
-# collection = db["cart_details"]
+cartclient=MongoClient(cart_uri)
+db = cartclient.get_database('cart')
+collection = db["cart_details"]
+admincollection = db["menu_details"]
+
 
 # @app.route("/add_to_cart", methods=['POST'])
 # def add_to_cart():
@@ -26,15 +28,10 @@ records = db["records"]
 # MongoDB connection
 # cart_uri = "mongodb+srv://admin:admin@cluster0.epqxvmj.mongodb.net"
 
-cart_client = MongoClient(cart_uri)
-db = cart_client.get_database('cart')
-collection = db["cart_details"]
-collection = db["menu_items"]
-
 
 
 @app.route("/add_to_cart", methods=['POST'])
-def add_to_cart():
+def add_to_cart_client():
     try:
         cart_item = request.get_json()
         collection.insert_one(cart_item)
@@ -46,62 +43,65 @@ def add_to_cart():
         return jsonify({'error': 'Failed to add item to cart'})
     
 
-@app.route("/add_product", methods=['POST'])
-def add_product():
+@app.route("/add_to_menu", methods=['POST'])
+def add_to_menu():
     try:
-        product = request.form['product']
-        category = request.form['category']
-        price = request.form['price']
-        
-        # Create a new product document
-        new_product = {
-            'product': product,
-            'category': category,
-            'price': price
-        }
-        
-        # Connect to the MongoDB server
-        cart_client = MongoClient(cart_uri)
-        db = cart_client['cart']
-        collection = db['menu_items']
-        
-        # Insert the new product into the collection
-        collection.insert_one(new_product)
-        
-        # Close the MongoDB connection
-        cart_client.close()
-        
+        menu_item = request.get_json()
+        admincollection.insert_one(menu_item)
+        print(menu_item)
         return jsonify({'message': 'Product added to menu'})
     
     except Exception as e:
-        print("Error adding product to menu:", str(e))
+        print("Error adding item to cart:", str(e))
         return jsonify({'error': 'Failed to add product to menu'})
+    
 
+@app.route("/remove_from_menu", methods=['POST'])
+def remove_from_menu():
+    try:
+        menu_item = request.get_json()
+        admincollection.delete_one(menu_item)
+        return jsonify({'message': 'Product remove to menu'})
+    
+    except Exception as e:
+        print("Error adding item to cart:", str(e))
+        return jsonify({'error': 'Failed to add product to menu'})
+    
 
-
-
-
+# @app.route("/add_product", methods=['POST'])
+# def add_product():
+#     print("Adding product to menu - admin")
+#     try:
+#         product = request.form['product']
+#         category = request.form['category']
+#         price = request.form['price']
+        
+#         # Create a new product document
+#         new_product = {
+#             'product': product,
+#             'category': category,
+#             'price': price
+#         }
+        
+#         # Insert the new product into the collection
+#         admincollection.insert_one(new_product)
+        
+#         return jsonify({'message': 'Product added to menu'})
+    
+#     except Exception as e:
+#         print("Error adding product to menu:", str(e))
+#         return jsonify({'error': 'Failed to add product to menu'})
 
 
 @app.route('/client-side.html')
 def client_side():
     return render_template('client-side.html')
-# def logout():
-#      session.pop("email", None)
-#      return render_template("index.html")
 
 @app.route("/", methods=['POST', 'GET'])
-
-
-
 def index():
     message = ''
     #if method post in index
     # if method post in index
-  
-
-   
-
     # Rest of your code...
 
     if request.method == "POST":
@@ -132,21 +132,15 @@ def index():
          # Check if any of the variables is None
  
     return render_template('index.html')
-def logout():
-    session.pop("email", None)
-    return render_template("index.html")
+
+# def logout():
+#     session.pop("email", None)
+#     return render_template("index.html")
     
 # def login():
 #     message = 'Please login to your account'
 #     if "email" in session:
 #         return redirect(url_for('client_side'))
-
-#     if request.method == "POST":
-#         print(request.form)
-#         email = request.form.get("email")
-#         password = request.form.get("password")
-#         print(email)
-#         print(password)
 
 #         #check if email exists in database
 #         email_found = records.find_one({"email": email})
@@ -214,7 +208,7 @@ def login():
             else:
                 passwordcheck = email_found['password']
                 print(passwordcheck)
-            #encode the password and check if it matches
+                #encode the password and check if it matches
                 if password==passwordcheck:
                     session["email"] = email_val
                     print("Validation Successful")
@@ -230,20 +224,28 @@ def login():
             return render_template('index.html', message=message)
     return render_template('index.html', message=message)
 
+@app.route('/menu_fetch')
+def menuget():
+    documents = admincollection.find()
+    items=[]
+
+    for item in documents:
+        item['_id'] = str(item['_id'])
+        items.append(item)
+    print(items)
+    return json.dumps(items)
+   
+    return items
 
 
-# def logout():
-#     session.pop("email", None).
-#     return render_template("index.html")
 @app.route('/logout')
 def logout():
-    return render_template('index.html')
+    session.pop("email", None)
+    return render_template("index.html")
 
 
 @app.route('/index.html')
 def home():
-    return render_template('index.html')
-def logout():
     return render_template('index.html')
 
 @app.route('/our-vision.html')
@@ -254,9 +256,9 @@ def our_vision():
 def admin():
     return render_template('admin-side.html')
 
-@app.route('/admin')
-def admina():
-    return render_template('admin-side.html')
+# @app.route('/admin')
+# def admina():
+#     return render_template('admin-side.html')
 
 @app.route('/user-orders.html')
 def user_orders():

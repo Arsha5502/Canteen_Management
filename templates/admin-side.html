@@ -116,31 +116,19 @@
           <div class="item-info">
             <figure>
               <div class="flex align-item-center">
-                <input id="add-title" type="text" placeholder="Title of Food" />
-                <input
-                  id="add-calories"
-                  type="text"
-                  placeholder="For Eg. 220 - 280 Kcal"
-                />
-                <input
-                  id="add-price"
-                  type="text"
-                  placeholder="Price"
-                  id="product-price"
-                />
+                <input id="add-product-admin" type="text" placeholder="Title of Food" />
+                <input id="add-price-admin" type="text" placeholder="Price" />
               </div>
             </figure>
             <div class="item-category my-1">
               <select name="Categories" id="add-category">
-                <option value="Burger">Burger</option>
-                <option value="Maggie">Maggie</option>
-                <option value="Fries">Fries</option>
-                <option value="Beverages">Beverages</option>
-                <option value="Pasta">Pasta</option>
+                <option value="Burger">BreakFast</option>
+                <option value="Maggie">Lunch</option>
+                <option value="Fries">Snacks</option>
               </select>
             </div>
             <div class="my-1 text-center">
-              <button class="btn">Add to Menu</button>
+              <button class="btn" onclick="addProduct()">Add to Menu</button>
             </div>
           </div>
         </article>
@@ -157,10 +145,12 @@
 
           <div class="item-info">
             <figure>
-              <h2><input type="text" placeholder="Title of Food" /></h2>
+              <h2>
+                <input id="remove-product-admin" type="text" placeholder="Title of Food" />
+              </h2>
             </figure>
             <div class="my-1 text-center">
-              <button class="btn">Remove From Menu</button>
+              <button class="btn" onclick="removeProduct()">Remove From Menu</button>
             </div>
           </div>
         </article>
@@ -175,75 +165,6 @@
     <script src="static/js/features.js"></script>
     <!-- Controls User Stuff -->
     <script src="static/js/functioning.js"></script>
-
-
-
-    <!-- ...Your existing code... -->
-
-    <section class="add-product add-container" id="add_to_menu">
-      <div class="container-min grid">
-        <div class="title md text-center">Add Product to Menu</div>
-        <hr />
-        <!-- Add Menu Item -->
-        <article class="menu-item text-center">
-          <img src="static/images/sandwich1.jpg" alt="Product image" />
-
-          <div class="item-info">
-            <figure>
-              <div class="flex align-item-center">
-                <input id="product" type="text" placeholder="Title of Food" />
-                <input id="category" type="text" placeholder="Category" />
-                <input id="price" type="text" placeholder="Price" />
-              </div>
-            </figure>
-            <div class="my-1 text-center">
-              <button class="btn" onclick="addProduct()">Add to Menu</button>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- ...Your existing code... -->
-
-    <!-- AJAX request to add a product -->
-    <script>
-      function addProduct() {
-        var product = document.getElementById('product').value;
-        var category = document.getElementById('category').value;
-        var price = document.getElementById('price').value;
-
-        // Create an XMLHttpRequest object
-        var xhr = new XMLHttpRequest();
-
-        // Configure the request
-        xhr.open('POST', '/add_product', true);
-        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-
-        // Define the request parameters
-        var params =
-          'product=' +
-          encodeURIComponent(product) +
-          '&category=' +
-          encodeURIComponent(category) +
-          '&price=' +
-          encodeURIComponent(price);
-
-        // Send the request
-        xhr.send(params);
-
-        // Handle the response
-        xhr.onload = function() {
-          if (xhr.status === 200) {
-            var response = JSON.parse(xhr.responseText);
-            console.log(response.message);
-          } else {
-            console.log('Failed to add product to menu');
-          }
-        };
-      }
-    </script>
-
 
   </body>
 </html>

@@ -27,17 +27,17 @@
 
 
 
-// var removeButton = document.getElementById('remove-product-menu');
-// var removeSection = document.getElementById('remove_from_menu');
-// console.log("REgistered")
-// removeButton.addEventListener("click", function() {
-//     console.log("clicked")
-//     if (removeSection.style.display === 'none') {
-//         removeSection.style.display = 'block';
-//     } else {
-//         removeSection.style.display = 'none';
-//     }
-//   });
+var removeButton = document.getElementById('remove-product-menu');
+var removeSection = document.getElementById('remove_from_menu');
+console.log("REgistered")
+removeButton.addEventListener("click", function() {
+    console.log("clicked")
+    if (removeSection.style.display === 'none') {
+        removeSection.style.display = 'block';
+    } else {
+        removeSection.style.display = 'none';
+    }
+  });
 
 var addButton = document.getElementById('add-product-menu');
 var addSection = document.getElementById('add_to_menu');
@@ -52,37 +52,58 @@ addButton.addEventListener("click", function() {
 });
 
 // Function to send an AJAX request to add a product
-function addProduct(product, category, price) {
-    // Create an XMLHttpRequest object
-    var xhr = new XMLHttpRequest();
-  
-    // Configure the request
-    xhr.open("POST", "/add_product", true);
-    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-  
-    // Define the request parameters
-    var params = "product=" + encodeURIComponent(product) + "&category=" + encodeURIComponent(category) + "&price=" + encodeURIComponent(price);
-  
-    // Send the request
-    xhr.send(params);
-  
-    // Handle the response
-    xhr.onload = function() {
-        if (xhr.status === 200) {
-            var response = JSON.parse(xhr.responseText);
-            console.log(response.message);
-        } else {
-            console.log("Failed to add product to menu");
-        }
-    };
+function addProduct() {
+    // product, category, price
+    let food_name = document.getElementById('add-product-admin').value;
+    let category = document.getElementById('add-category-admin').value;
+    let price = document.getElementById('add-price-admin').value;
+
+    fetch("/add_to_menu", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({food_name, category, price}),
+      })
+        .then(function (response) {
+          // Handle the response from the server
+          if (response.ok) {
+            // Item added to cart successfully
+            alert("Item added to cart!");
+          } else {
+            // Error occurred while adding item to cart
+            alert("Error adding item to cart. Please try again.");
+          }
+        })
+        .catch(function (error) {
+          // Error occurred while making the request
+          console.error("Error:", error);
+          alert("An error occurred. Please try again later.");
+        });
 }
 
-// // Example usage
-// var product = "New Product";
-// var category = "Food";
-// var price = 10.99;
-
-addProduct(product, category, price);
+function removeProduct() {
+  let food_name = document.getElementById('remove-product-admin').value;
+  console.log(food_name);
+  fetch("/remove_from_menu", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({food_name}),
+  })
+    .then(function (response) {
+      if (response.ok) {
+        alert("Item removed to cart!");
+      } else {
+        alert("Error removing item to cart. Please try again.");
+      }
+    })
+    .catch(function (error) {
+      console.error("Error:", error);
+      alert("An error occurred. Please try again later.");
+    });
+}
 
 
 // var addButton = document.getElementById('add-product-menu');

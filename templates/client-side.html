@@ -24,9 +24,12 @@
     <link rel="stylesheet" href="static/css/animations.css" />
 
     <!-- Firebase Connectivity Using CDN -->
-    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script> -->
+
+    <!-- Controls User Stuff -->
+    <script src="static/js/functioning.js"></script>
 
     <!-- Sweet Alert Pop Modal -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -79,9 +82,9 @@
             </div>
             <div>
               <!-- Cart Icon -->
-              <a class="flex" id="cart-btn">
+              <a class="flex" id="cart-btn" onclick="findTotalPrice()">
                 <i class="fas fa-shopping-cart"></i>
-                <p id="cart-values">0</p>
+                <p class="cart-values">0</p>
               </a>
             </div>
           </ul>
@@ -99,7 +102,7 @@
           <!-- Cart Icon -->
           <a class="flex" id="cart-btn">
             <i class="fas fa-shopping-cart"></i>
-            <p id="cart-values">6</p>
+            <p class="cart-values">0</p>
           </a>
         </ul>
       </nav>
@@ -146,7 +149,7 @@
     </section>
 
     <!-- Menu -->
-    <section class="menu" style="padding:15px" id="menu_details">
+    <section class="menu" style="padding: 15px;" id="menu_details">
       <main class="container grid grid-1">
         <!-- Title -->
         <div class="title text-center">
@@ -213,12 +216,13 @@
         </div>
         <hr />
         <!-- Menu Items -->
-        <div class=" grid grid-3">
-          <article class="menu-item">
+        <button onclick="menucall()">View Items</button>
+        <div class="flex flex-wrap" id="menu_fetch">
+          <!-- <article class="menu-item" width="220px">
             <img src="static/images/burger.jpg" loading="lazy" alt="Product image">
             <div class="item-info">
             <figure>
-                <h2 id="item">Double Cheese Potato Burger</h2>
+                <h2 class='item-name' id="item">Double Cheese Potato Burger</h2>
                 <div class="item-category">Burger</div>
                 <div class="flex" style="margin-top: 10px;">
                     <i class="fas fa-fire"></i>
@@ -229,52 +233,12 @@
             <div class="menu-cart-functionality">
                 <div class="price" id="price">&#8377;45</div>
                 <div class="cart-btn-container">
-                    <button onclick="addToCart()" class="bag-btn" id="add-to-cart-btn" data-id=1>Add to Cart</i></button>
+                    <button onclick='addToCart(this)' class="bag-btn" id="add-to-cart-btn" data-id=1>Add to Cart</i></button>
                 </div>
               </div>
             </div>
           </article>
-          <article class="menu-item">
-            <img src="static/images/burger.jpg" loading="lazy" alt="Product image">
-            <div class="item-info">
-            <figure>
-                <h2 id="item1">Cheese Potato Burger</h2>
-                <div class="item-category">Burger</div>
-                <div class="flex" style="margin-top: 10px;">
-                    <i class="fas fa-fire"></i>
-                    <p>220 - 280 Kcal</p>
-                </div>
-            </figure>
-            <hr style="margin: 10px 0;">
-            <div class="menu-cart-functionality">
-                <div class="price" id="price1">&#8377;35</div>
-                <div class="cart-btn-container">
-                    <button onclick="addToCart()" class="bag-btn" id="add-to-cart-btn" data-id=2>Add to Cart</i></button>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="menu-item">
-            <img src="static/images/sandwich1.jpg" loading="lazy" alt="Product image">
-            <div class="item-info">
-            <figure>
-                <h2 id="item2">Cheese Sandwitch</h2>
-                <div class="item-category">Sandwich</div>
-                <div class="flex" style="margin-top: 10px;">
-                    <i class="fas fa-fire"></i>
-                    <p>220 - 270 Kcal</p>
-                </div>
-            </figure>
-            <hr style="margin: 10px 0;">
-            <div class="menu-cart-functionality">
-                <div class="price" id="price2">&#8377;15</div>
-                <div class="cart-btn-container">
-                    <button onclick="addToCart()" class="bag-btn" id="add-to-cart-btn" data-id=2>Add to Cart</i></button>
-                </div>
-              </div>
-            </div>
-          </article>
+           -->
         </div>
       </main>
     </section>
@@ -283,7 +247,29 @@
     <script src="static/js/main.js"></script>
     <!-- Creative Features -->
     <script src="static/js/features.js"></script>
-    <!-- Controls User Stuff -->
-    <script src="static/js/functioning.js"></script>
   </body>
+  <script>
+  var v =[]
+  
+  let total =0
+
+  function addToCart(element) {
+    console.log(element);
+    let fooditem = element.parentNode.parentNode.parentNode.querySelector('.item-name').innerText
+    let price = element.parentNode.parentNode.parentNode.querySelector('.price').innerText
+    total += parseInt(price.slice(1,price.length))
+    v.push({fooditem,price})
+    console.log(v)
+    console.log(total);
+    let t = document.getElementById('cart-values').innerText 
+    t= parseInt(t)+1
+    document.getElementById('cart-values').innerText = t
+  }
+
+  function findTotalPrice() {
+    let c=document.querySelector('.cart-total')
+    console.log(c)
+    c.innerHTML=total
+  }  
+  </script>
 </html>

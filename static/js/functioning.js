@@ -1,3 +1,59 @@
+function menucall(){
+    // const container = document.getElementById('menu_fetch');
+    fetch('/menu_fetch')
+    .then((items)=>{
+      items.json()
+      .then((val)=>{
+        // console.log('json --' + val);
+        document.getElementById('menu_fetch').innerHTML = '';
+        for (let i=0; i<val.length; i++){
+          console.log(val[i]);
+          document.getElementById('menu_fetch').innerHTML += `
+          <article class="menu-item" width="220px">
+            <img src=${val[i].link || "https://th.bing.com/th/id/OIP.hh1iTLMD25YyLcrrbtmemwEyDM?pid=ImgDet&rs=1"} loading="lazy" alt="Product image">
+            <div class="item-info">
+            <figure>
+                <h2 class='item-name' id="item">${val[i].food_name}</h2>
+                <div class="item-category">Burger</div>
+                <div class="flex" style="margin-top: 10px;">
+                    <i class="fas fa-fire"></i>
+                    <p>220 - 280 Kcal</p>
+                </div>
+            </figure>
+            <hr style="margin: 10px 0;">
+            <div class="menu-cart-functionality">
+                <div class="price" id="price">&#8377;${val[i].price}</div>
+                <div class="cart-btn-container">
+                    <button onclick='addToCart(this)' class="bag-btn" id="add-to-cart-btn" data-id=1>Add to Cart</i></button>
+                </div>
+              </div>
+            </div>
+          </article>
+          `
+        }
+      }).catch((err)=>{
+        console.log('err '+err);
+      });
+    })
+    .catch(function (error) {
+      // Error occurred while making the request
+      console.error("Error:", error);
+      alert("An error occurred. Please try again later.");
+    });
+  }
+  menucall();
+
+  function renderData(data) {
+    
+  
+    // Iterate over the data and create HTML elements to display it
+    data.forEach((item) => {
+      const element = document.createElement('p');
+      element.textContent = `Name: ${item.name}, Age: ${item.age}`; // Customize based on your data structure
+      container.appendChild(element);
+    });
+  }
+  
   // --- Authentication Part ---
   // Your web app's Firebase configuration
   /*var firebaseConfig = {
