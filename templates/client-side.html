@@ -69,11 +69,11 @@
                 ><i class="fas fa-cocktail"></i> Menu</a
               >
             </li>
-            <li>
+            <!-- <li>
               <a href="/user-orders.html"
                 ><i class="fas fa-coins"></i> Your Orders</a
               >
-            </li>
+            </li> -->
             <li><a href="/index.html">Log Out</a>
             </li>
             <div>
@@ -84,7 +84,7 @@
               <!-- Cart Icon -->
               <a class="flex" id="cart-btn" onclick="findTotalPrice()">
                 <i class="fas fa-shopping-cart"></i>
-                <p class="cart-values">0</p>
+                <p id="cart-values">0</p>
               </a>
             </div>
           </ul>
@@ -102,7 +102,7 @@
           <!-- Cart Icon -->
           <a class="flex" id="cart-btn">
             <i class="fas fa-shopping-cart"></i>
-            <p class="cart-values">0</p>
+            <p class="cart-values"></p>
           </a>
         </ul>
       </nav>
@@ -133,7 +133,7 @@
           <div>Your Total : &#8377;<span class="cart-total sm">0</span></div>
           <div class="my-1">
             <button class="clear-cart">Clear Cart</button>
-            <button class="check-out">Order Now</button>
+            <button class="check-out" onClick="options()">Order Now</button>
           </div>
         </div>
       </div>
@@ -250,28 +250,62 @@
     <!-- Creative Features -->
     <script src="static/js/features.js"></script>
   </body>
-  <script>
-  var v =[]
+  <!-- <script>
+  // var v =[]
   
-  let total =0
+  // let total =0
 
-  function addToCart(element) {
-    console.log(element);
-    let fooditem = element.parentNode.parentNode.parentNode.querySelector('.item-name').innerText
-    let price = element.parentNode.parentNode.parentNode.querySelector('.price').innerText
-    total += parseInt(price.slice(1,price.length))
-    v.push({fooditem,price})
-    console.log(v)
-    console.log(total);
-    let t = document.getElementById('cart-values').innerText 
-    t= parseInt(t)+1
-    document.getElementById('cart-values').innerText = t
-  }
+  // function addToCart(element) {
+  //   console.log(element);
+  //   let fooditem = element.parentNode.parentNode.parentNode.querySelector('.item-name').innerText
+  //   let price = element.parentNode.parentNode.parentNode.querySelector('.price').innerText
+  //   total += parseInt(price.slice(1,price.length))
+  //   v.push({fooditem,price})
+  //   console.log(v)
+  //   console.log(total);
+  //   let t = document.getElementById('cart-values').innerText 
+  //   t= parseInt(t)+1
+  //   document.getElementById('cart-values').innerText = t
+  //   let email="{{email}}";
+  //   // let userId="user";
+  //   let cartId="cart";
+  //   let cartItem = {
+  //   userId: email,
+  //   cartId: cartId,
+  //   foodItem: fooditem,
+  //   totalAmount: price,
+  // };
 
-  function findTotalPrice() {
-    let c=document.querySelector('.cart-total')
-    console.log(c)
-    c.innerHTML=total
-  }  
-  </script>
+  // // Send an AJAX request to your server to save the cart item
+  // // Example using fetch:
+  // fetch("/add_to_cart", {
+  //   method: "POST",
+  //   headers: {
+  //     "Content-Type": "application/json",
+  //   },
+  //   body: JSON.stringify(cartItem),
+  // })
+  //   .then(function (response) {
+  //     // Handle the response from the server
+  //     if (response.ok) {
+  //       // Item added to cart successfully
+  //       alert("Item added to cart!");
+  //     } else {
+  //       // Error occurred while adding item to cart
+  //       alert("Error adding item to cart. Please try again.");
+  //     }
+  //   })
+  //   .catch(function (error) {
+  //     // Error occurred while making the request
+  //     console.error("Error:", error);
+  //     alert("An error occurred. Please try again later.");
+  //   });
+  // }
+
+  // function findTotalPrice() {
+  //   let c=document.querySelector('.cart-total')
+  //   console.log(c)
+  //   c.innerHTML=total
+  // }  
+  </script -->
 </html>

@@ -37,7 +37,7 @@ def add_to_cart_client():
         collection.insert_one(cart_item)
         print(cart_item)
         return jsonify({'message': 'Item added to cart'})
-    
+        
     except Exception as e:
         print("Error adding item to cart:", str(e))
         return jsonify({'error': 'Failed to add item to cart'})
@@ -213,13 +213,13 @@ def login():
                 if password==passwordcheck:
                     session["email"] = email_val
                     print("Validation Successful")
-                    return render_template('client-side.html')
+                    return render_template('client-side.html',email=email_val)
                 else:
                     if "email" in session:
-                        return render_template('client-side.html')
+                        return render_template('client-side.html',email=email_val)
                     message = 'Wrong password'
                     print(message)
-                    return render_template('index.html', message=message)
+                    return render_template('index.html', message=message,email=email_val)
         else:
             message = 'Email not found'
             return render_template('index.html', message=message)
