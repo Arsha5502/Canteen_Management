@@ -43,7 +43,7 @@ function menucall(){
       alert("An error occurred. Please try again later.");
     });
   }
-  menucall();
+  // menucall();
 
   function renderData(data) {
     
