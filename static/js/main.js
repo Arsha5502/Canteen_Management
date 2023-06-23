@@ -334,47 +334,47 @@ function displayMenuItems(menuItems) {
   }
 
 }
-// function addToCart(element) {
-//   console.log(element.parentNode.parentNode.parentNode.querySelector('.item-name').innerText)
-//   console.log(element.parentNode.parentNode.parentNode.querySelector('.price').innerText)
-//   let userId = "user"; // Replace with the actual user ID
-//   let cartId = "cart"; // Replace with the actual cart ID
-//   let fooditem = element.parentNode.parentNode.parentNode.querySelector('.item-name').innerText
-//   let price = element.parentNode.parentNode.parentNode.querySelector('.price').innerText
+function addToCart(element) {
+  console.log(element.parentNode.parentNode.parentNode.querySelector('.item-name').innerText)
+  console.log(element.parentNode.parentNode.parentNode.querySelector('.price').innerText)
+  let userId = "user"; // Replace with the actual user ID
+  let cartId = "cart"; // Replace with the actual cart ID
+  let fooditem = element.parentNode.parentNode.parentNode.querySelector('.item-name').innerText
+  let price = element.parentNode.parentNode.parentNode.querySelector('.price').innerText
 
-//   // Create an object with the cart item details
-//   let cartItem = {
-//     userId: userId,
-//     cartId: cartId,
-//     foodItem: fooditem,
-//     totalAmount: price,
-//   };
+  // Create an object with the cart item details
+  let cartItem = {
+    userId: userId,
+    cartId: cartId,
+    foodItem: fooditem,
+    totalAmount: price,
+  };
 
-//   // Send an AJAX request to your server to save the cart item
-//   // Example using fetch:
-//   fetch("/add_to_cart", {
-//     method: "POST",
-//     headers: {
-//       "Content-Type": "application/json",
-//     },
-//     body: JSON.stringify(cartItem),
-//   })
-//     .then(function (response) {
-//       // Handle the response from the server
-//       if (response.ok) {
-//         // Item added to cart successfully
-//         alert("Item added to cart!");
-//       } else {
-//         // Error occurred while adding item to cart
-//         alert("Error adding item to cart. Please try again.");
-//       }
-//     })
-//     .catch(function (error) {
-//       // Error occurred while making the request
-//       console.error("Error:", error);
-//       alert("An error occurred. Please try again later.");
-//     });
-// }
+  // Send an AJAX request to your server to save the cart item
+  // Example using fetch:
+  fetch("/add_to_cart", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(cartItem),
+  })
+    .then(function (response) {
+      // Handle the response from the server
+      if (response.ok) {
+        // Item added to cart successfully
+        alert("Item added to cart!");
+      } else {
+        // Error occurred while adding item to cart
+        alert("Error adding item to cart. Please try again.");
+      }
+    })
+    .catch(function (error) {
+      // Error occurred while making the request
+      console.error("Error:", error);
+      alert("An error occurred. Please try again later.");
+    });
+}
 
 function logout(){
   windows.location.href='/';

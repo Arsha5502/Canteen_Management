@@ -55,7 +55,7 @@ addButton.addEventListener("click", function() {
 function addProduct() {
     // product, category, price
     let food_name = document.getElementById('add-product-admin').value;
-    let category = document.getElementById('add-category-admin').value;
+    let category = document.getElementById('add-category').value;
     let price = document.getElementById('add-price-admin').value;
 
     fetch("/add_to_menu", {
@@ -82,6 +82,7 @@ function addProduct() {
         });
 }
 
+
 function removeProduct() {
   let food_name = document.getElementById('remove-product-admin').value;
   console.log(food_name);
@@ -104,6 +105,8 @@ function removeProduct() {
       alert("An error occurred. Please try again later.");
     });
 }
+
+
 
 
 // var addButton = document.getElementById('add-product-menu');

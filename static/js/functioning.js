@@ -14,7 +14,7 @@ function menucall(){
             <div class="item-info">
             <figure>
                 <h2 class='item-name' id="item">${val[i].food_name}</h2>
-                <div class="item-category">Burger</div>
+                <div class="item-category">${val[i].category}</div>
                 <div class="flex" style="margin-top: 10px;">
                     <i class="fas fa-fire"></i>
                     <p>220 - 280 Kcal</p>
@@ -30,10 +30,12 @@ function menucall(){
             </div>
           </article>
           `
+   
         }
       }).catch((err)=>{
         console.log('err '+err);
       });
+    
     })
     .catch(function (error) {
       // Error occurred while making the request
