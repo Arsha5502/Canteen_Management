@@ -25,6 +25,7 @@ function menucall(){
                 <div class="price" id="price">&#8377;${val[i].price}</div>
                 <div class="cart-btn-container">
                     <button onclick='addToCart(this)' class="bag-btn" id="add-to-cart-btn" data-id=1>Add to Cart</i></button>
+                  
                 </div>
               </div>
             </div>
@@ -32,11 +33,15 @@ function menucall(){
           `
    
         }
+          
       }).catch((err)=>{
         console.log('err '+err);
       });
+      
     
     })
+
+    
     .catch(function (error) {
       // Error occurred while making the request
       console.error("Error:", error);
