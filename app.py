@@ -47,6 +47,7 @@ def add_to_cart_client():
 def add_to_menu():
     try:
         menu_item = request.get_json()
+        print(menu_item)
         admincollection.insert_one(menu_item)
         print(menu_item)
         return jsonify({'message': 'Product added to menu'})
