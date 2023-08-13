@@ -81,13 +81,126 @@ function addToCart(element) {
   let fooditem = element.parentNode.parentNode.parentNode.querySelector('.item-name').innerText
   let price = element.parentNode.parentNode.parentNode.querySelector('.price').innerText
 
-  // Create an object with the cart item details
-  let cartItem = {
-    userId: userId,
+//   // Create an object with the cart item details
+//   let cartItem = {
+//     userId: userId,
+//     cartId: cartId,
+//     foodItem: fooditem,
+//     totalAmount: price,
+//   };
+
+//   // Send an AJAX request to your server to save the cart item
+//   // Example using fetch:
+//   fetch("/add_to_cart", {
+//     method: "POST",
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//     body: JSON.stringify(cartItem),
+//   })
+//     .then(function (response) {
+//       // Handle the response from the server
+//       if (response.ok) {
+//         // Item added to cart successfully
+//         alert("Item added to cart!");
+//       } else {
+//         // Error occurred while adding item to cart
+//         alert("Error adding item to cart. Please try again.");
+//       }
+//     })
+//     .catch(function (error) {
+//       // Error occurred while making the request
+//       console.error("Error:", error);
+//       alert("An error occurred. Please try again later.");
+//     });
+// }
+
+function logout(){
+  windows.location.href='/';
+}
+
+
+
+
+function options() 
+{
+  const element = document.getElementById("menu_fetch");
+  element.scrollIntoView();
+
+
+  fetch('/menu_fetch')
+    .then((items)=>
+    {
+      items.json()
+      .then((val)=>
+      {
+        // console.log('json --' + val);
+        document.getElementById('menu_fetch').innerHTML = '';
+        for (let i=0; i<val.length; i++)
+        {
+          console.log(val[i]);
+            document.getElementById('menu_fetch').innerHTML = `
+            <article class="menu-item" width="220px">
+              <img src=${val[i].link || "https://th.bing.com/th/id/OIP.hh1iTLMD25YyLcrrbtmemwEyDM?pid=ImgDet&rs=1"} loading="lazy" alt="Product image">
+              <div class="item-info">
+              <figure>
+                  <h2 class='item-name' id="item">${val[i].food_name}</h2>
+                  <div class="item-category">${val[i].category}</div>
+                  <div class="flex" style="margin-top: 10px;">
+                      
+                      <p>${val[i].quantity}</p>
+                  </div>
+              </figure>
+              <hr style="margin: 10px 0;">
+              <div class="menu-cart-functionality">
+                  <div class="price" id="price">&#8377;${val[i].price}</div>
+                  <input class="item-nos" type="number" name="integerInput" value="1" style="width: 50px;">
+                  <div class="cart-btn-container">
+                      <button onclick='addToCart(this)' class="bag-btn" id="add-to-cart-btn" data-id=1>Add to Cart</i></button>   
+                  </div>
+                </div>
+              </div>
+            </article>`
+        }
+      }).catch((err)=>{
+        console.log('err '+err);
+      });
+   
+    })
+
+}
+
+var v =[]
+  
+  let total =0
+
+  function addToCart(element) 
+  {
+    console.log(element);
+    let fooditem = document.querySelector('.item-name').innerText;
+    let price = document.querySelector('.price').innerText;
+    let qty = document.querySelector('.item-nos').value;
+    console.log(qty);
+    let t_pr = parseInt(price.slice(1,price.length));//100
+    t_pr = t_pr*qty;//3*100
+    total = total+t_pr;//6+300
+    v.push({fooditem,qty,t_pr})
+    console.log(v);
+    
+    let t = document.getElementById('cart-values').innerText 
+    t= parseInt(t)+1
+    document.getElementById('cart-values').innerText = t
+    let email="{{email}}";
+    // let userId="user";
+    let cartId="cart";
+    let cartItem = {
+    userId: email,
     cartId: cartId,
     foodItem: fooditem,
     totalAmount: price,
   };
+  document.querySelector(".item-nos").value = 1;
+
 
   // Send an AJAX request to your server to save the cart item
   // Example using fetch:
@@ -126,6 +239,40 @@ function options() {
 }
 
 
+  function findTotalPrice() {
+  
+    var table = document.getElementById("myTable");
+    var tbody = table.getElementsByTagName('tbody')[0];
+
+    // Clear the existing table content
+    tbody.innerHTML = "";
+    
+    if (v.length === 0) 
+    {
+      var noItemRow = tbody.insertRow(0);
+      var noItemCell = noItemRow.insertCell(0);
+      noItemCell.colSpan = 3; // Span across all columns
+      noItemCell.innerHTML = "No items";
+    } 
+    else 
+    {
+      v.forEach(function(item) 
+      {
+        var newRow = tbody.insertRow(tbody.rows.length);
+        var cell1 = newRow.insertCell(0);
+        var cell2 = newRow.insertCell(1);
+        var cell3 = newRow.insertCell(2);
+        
+        cell1.innerHTML = item.fooditem;
+        cell2.innerHTML = item.qty;
+        cell3.innerHTML = item.t_pr;
+      });
+    }
+
+    let c=document.querySelector('.cart-total')
+    console.log(c)
+    c.innerHTML=total
+  }  
 
 
 

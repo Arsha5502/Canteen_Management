@@ -1,4 +1,5 @@
-function menucall(){
+function menucall()
+{
     // const container = document.getElementById('menu_fetch');
     fetch('/menu_fetch')
     .then((items)=>{
@@ -7,30 +8,35 @@ function menucall(){
         // console.log('json --' + val);
         document.getElementById('menu_fetch').innerHTML = '';
         for (let i=0; i<val.length; i++){
-          console.log(val[i]);
-          document.getElementById('menu_fetch').innerHTML += `
-          <article class="menu-item" width="220px">
-            <img src=${val[i].link || "https://th.bing.com/th/id/OIP.hh1iTLMD25YyLcrrbtmemwEyDM?pid=ImgDet&rs=1"} loading="lazy" alt="Product image">
-            <div class="item-info">
-            <figure>
-                <h2 class='item-name' id="item">${val[i].food_name}</h2>
-                <div class="item-category">${val[i].category}</div>
-                <div class="flex" style="margin-top: 10px;">
-                    <i class="fas fa-fire"></i>
-                    <p>220 - 280 Kcal</p>
-                </div>
-            </figure>
-            <hr style="margin: 10px 0;">
-            <div class="menu-cart-functionality">
-                <div class="price" id="price">&#8377;${val[i].price}</div>
-                <div class="cart-btn-container">
-                    <button onclick='addToCart(this)' class="bag-btn" id="add-to-cart-btn" data-id=1>Add to Cart</i></button>
-                  
+          
+          let cat = document.querySelector(".category-search").value;
+          if(val[i].category.toLowerCase()===cat.toLowerCase())
+          {
+            console.log(val[i]);
+            document.getElementById('menu_fetch').innerHTML = `
+            <article class="menu-item" width="220px">
+              <img src=${val[i].link || "https://th.bing.com/th/id/OIP.hh1iTLMD25YyLcrrbtmemwEyDM?pid=ImgDet&rs=1"} loading="lazy" alt="Product image">
+              <div class="item-info">
+              <figure>
+                  <h2 class='item-name' id="item">${val[i].food_name}</h2>
+                  <div class="item-category">${val[i].category}</div>
+                  <div class="flex" style="margin-top: 10px;">
+                      
+                      <p>${val[i].quantity}</p>
+                  </div>
+              </figure>
+              <hr style="margin: 10px 0;">
+              <div class="menu-cart-functionality">
+                  <div class="price" id="price">&#8377;${val[i].price}</div>
+                  <input class="item-nos" type="number" name="integerInput" value="1" style="width: 50px;">
+                  <div class="cart-btn-container">
+                      <button onclick='addToCart(this)' class="bag-btn" id="add-to-cart-btn" data-id=1>Add to Cart</i></button>   
+                  </div>
                 </div>
               </div>
-            </div>
-          </article>
-          `
+            </article>
+            `
+          }
    
         }
           
@@ -47,6 +53,8 @@ function menucall(){
       console.error("Error:", error);
       alert("An error occurred. Please try again later.");
     });
+
+    
   }
   // menucall();
 
