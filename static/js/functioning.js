@@ -13,7 +13,7 @@ function menucall()
           if(val[i].category.toLowerCase()===cat.toLowerCase())
           {
             console.log(val[i]);
-            document.getElementById('menu_fetch').innerHTML = `
+            document.getElementById('menu_fetch').innerHTML += `
             <article class="menu-item" width="220px">
               <img src=${val[i].link || "https://th.bing.com/th/id/OIP.hh1iTLMD25YyLcrrbtmemwEyDM?pid=ImgDet&rs=1"} loading="lazy" alt="Product image">
               <div class="item-info">
