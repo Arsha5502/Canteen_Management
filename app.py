@@ -119,7 +119,7 @@ def index():
             return render_template('index.html', message=message)
         if password1 != password2:
             message = 'Passwords should match!'
-            print('Password should match')
+            
         else:
             #hash the password and encode it
             #assing them in a dictionary in key value pairs
@@ -192,10 +192,10 @@ def login():
                 return render_template('client-side.html', email=user['email'])
             else:
                 message = 'Wrong password'
-                print(message)
+               
         else:
             message = 'Email not found'
-            print(message)
+            
 
     return render_template('index.html', message=message)
 

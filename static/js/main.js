@@ -233,10 +233,10 @@ function logout(){
   windows.location.href='/';
 }
 
-function options() {
-  const element = document.getElementById("menu_details");
-  element.scrollIntoView();
-}
+// function options() {
+//   const element = document.getElementById("menu_details");
+//   element.scrollIntoView();
+// }
 
 
   function findTotalPrice() {
@@ -640,4 +640,4 @@ function ClientDataFlow(addToCartBtn) {
     }
   });
 }
-
+}
