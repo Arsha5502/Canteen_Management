@@ -234,8 +234,6 @@ function logout(){
 }
 
 
-
-
   function findTotalPrice() {
   
     var table = document.getElementById("myTable");
@@ -637,4 +635,4 @@ function ClientDataFlow(addToCartBtn) {
     }
   });
 }
-
+}
