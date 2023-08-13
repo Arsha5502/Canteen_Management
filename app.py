@@ -115,9 +115,11 @@ def index():
         
         if email_found != None:
             message = 'This email already exists in database'
+            print(message)
             return render_template('index.html', message=message)
         if password1 != password2:
             message = 'Passwords should match!'
+            print('Password should match')
         else:
             #hash the password and encode it
             #assing them in a dictionary in key value pairs
@@ -128,6 +130,7 @@ def index():
             #find the new created account and its email
             user_data = records.find_one({"email": email})
             new_email = user_data['email']
+            print(user_data)
             #if registered redirect to logged in as the registered user
             return render_template('index.html', email=new_email)
          # Check if any of the variables is None
@@ -189,8 +192,10 @@ def login():
                 return render_template('client-side.html', email=user['email'])
             else:
                 message = 'Wrong password'
+                print(message)
         else:
             message = 'Email not found'
+            print(message)
 
     return render_template('index.html', message=message)
 
