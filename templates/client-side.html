@@ -123,10 +123,21 @@
             </i>
           </div>
         </header>
+        <hr class="py-1" />
         <!-- Cart Item Container -->
-        <div class="cart-items-container py-2">
           <!-- Cart Items added to cart -->
-        </div>
+          <table id="myTable">
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Table rows will be added here using JavaScript -->
+            </tbody>
+          </table>
         <hr class="py-1" />
         <!-- Footer Side  -->
         <div class="cart-footer text-center sm">
@@ -144,104 +155,25 @@
     <section class="menu-hero">
       <div class="banner">
         <h1 class="banner-title lg">Our Menu</h1>
-        <button class="banner-btn btn" onclick="options()">order now</button>
+        <button class="banner-btn btn" onclick="options()">Order Now</button>
       </div>
     </section>
 
     <!-- Menu -->
-    <section class="menu" style="padding: 15px;" id="menu_details">
+    <section class="menu"  id="menu_details" style="padding: 15px ;">
       <main class="container grid grid-1">
         <!-- Title -->
         <div class="title text-center">
-          <h2 class="lg my-2">Filter By Category</h2>
+          <h2 class="lg my-2">Search</h2>
           <!-- Filter Buttons -->
-          <div class="btn-container grid grid-4">
-            <button
-              id="menu-filter"
-              class="filter-btn btn current"
-              type="button"
-              data-id="all"
-            >
-              All
-            </button>
-            <button
-              id="menu-filter"
-              class="filter-btn btn"
-              type="button"
-              data-id="Burger"
-            >
-              Burger
-            </button>
-            <button
-              id="menu-filter"
-              class="filter-btn btn"
-              type="button"
-              data-id="Sandwitch"
-            >
-              Sandwich
-            </button>
-            <button
-              id="menu-filter"
-              class="filter-btn btn"
-              type="button"
-              data-id="Fries"
-            >
-              Fries
-            </button>
-            <button
-              id="menu-filter"
-              class="filter-btn btn fv"
-              type="button"
-              data-id="Maggie"
-            >
-              Maggie
-            </button>
-            <button
-              id="menu-filter"
-              class="filter-btn btn"
-              type="button"
-              data-id="Beverages"
-            >
-              Beverages
-            </button>
-            <button
-              id="menu-filter"
-              class="filter-btn btn"
-              type="button"
-              data-id="Pasta"
-            >
-              Pasta
-            </button>
+          <div class="search-container">
+            <input type="text" class="category-search" placeholder="Search categories..." style="width: 500px; height:50px;">
           </div>
         </div>
         <hr />
         <!-- Menu Items -->
-        <button onclick="menucall()">View Items</button>
-
-
-        <div class="flex flex-wrap" id="menu_fetch">
-          <!-- <article class="menu-item" width="220px">
-            <img src="static/images/burger.jpg" loading="lazy" alt="Product image">
-            <div class="item-info">
-            <figure>
-                <h2 class='item-name' id="item">Double Cheese Potato Burger</h2>
-                <div class="item-category">Burger</div>
-                <div class="flex" style="margin-top: 10px;">
-                    <i class="fas fa-fire"></i>
-                    <p>220 - 280 Kcal</p>
-                </div>
-            </figure>
-            <hr style="margin: 10px 0;">
-            <div class="menu-cart-functionality">
-                <div class="price" id="price">&#8377;45</div>
-                <div class="cart-btn-container">
-                    <button onclick='addToCart(this)' class="bag-btn" id="add-to-cart-btn" data-id=1>Add to Cart</i></button>
-                </div>
-              </div>
-            </div>
-          </article>
-           -->
-        </div>
+        <button onclick="menucall()" >View Items</button>
+        <div class="flex flex-wrap" id="menu_fetch"></div>
       </main>
     </section>
 

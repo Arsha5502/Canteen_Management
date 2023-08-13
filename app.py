@@ -173,58 +173,29 @@ def index():
 
 @app.route("/client-side.html", methods=['POST','GET'])
 def login():
-    message = 'Please login to your account'
-    # if "email" in session:
-    #     return render_template('client-side.html')
+    message = 'Please log in to your account'
 
     if request.method == "POST":
-        print(request.form)
         email = request.form.get("email")
         password = request.form.get("password")
-        print(email)
-        print(password)
+        user = records.find_one({"email": email})
+        print("User Details : ", user)
 
-        #check if email exists in database
-        email_found = records.find_one({"email": email})
-        print("email found", email_found)
-        
-        if email_found:
-            email_val = email_found['email']
-            print(email_val)
-            if(email_val=='admin@gmail.com'):
-                passwordcheck = email_found['password']
-                print(passwordcheck)
-                #encode the password and check if it matches
-                if password==passwordcheck:
-                    session["email"] = email_val
-                    print("Validation Successful")
+        if user:
+            if password == user['password']:
+                session["email"] = user['email']
+                if user['email'] == 'admin@gmail.com':
                     return redirect(url_for('admin'))
-                else:
-                    if "email" in session:
-                        return render_template('admin-side.html')
-                    message = 'Wrong password'
-                    print(message)
-                    return render_template('index.html', message=message)
-                    
+                return render_template('client-side.html', email=user['email'])
             else:
-                passwordcheck = email_found['password']
-                print(passwordcheck)
-                #encode the password and check if it matches
-                if password==passwordcheck:
-                    session["email"] = email_val
-                    print("Validation Successful")
-                    return render_template('client-side.html',email=email_val)
-                else:
-                    if "email" in session:
-                        return render_template('client-side.html',email=email_val)
-                    message = 'Wrong password'
-                    print(message)
-                    return render_template('index.html', message=message,email=email_val)
+                message = 'Wrong password'
         else:
             message = 'Email not found'
-            return render_template('index.html', message=message)
+
     return render_template('index.html', message=message)
 
+
+   
 @app.route('/menu_fetch')
 def menuget():
     documents = admincollection.find()
@@ -235,8 +206,6 @@ def menuget():
         items.append(item)
     print(items)
     return json.dumps(items)
-   
-    return items
 
 
 @app.route('/logout')
