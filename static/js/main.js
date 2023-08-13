@@ -1,265 +1,4 @@
-// var newMenu = [
-//   {
-//     sys: { id: "1" },
-//     fields: {
-//       title: "Double Cheese Potato Burger",
-//       category: "Burger",
-//       price: "45",
-//       caleories: "220 - 280 Kcal",
-//       image: { fields: { file: { url: "static/images/burger.jpg" } } },
-//     },
-//   },
-//   {
-//     sys: { id: "2" },
-//     fields: {
-//       title: "Cheese Sandwitch",
-//       category: "Sandwitch",
-//       price: "45",
-//       caleories: "250 - 300 Kcal",
-//       image: { fields: { file: { url: "static/images/sandwich1.jpg" } } },
-//     },
-//   },
-//   {
-//     sys: { id: "3" },
-//     fields: {
-//       title: "Veg Club Sandwitch",
-//       category: "Sandwitch",
-//       price: "60",
-//       caleories: "320 - 400 Kcal",
-//       image: { fields: { file: { url: "static/images/s2.jpg" } } },
-//     },
-//   },
-//   {
-//     sys: { id: "4" },
-//     fields: {
-//       title: "Cheese Masala Sandwitch",
-//       category: "Sandwitch",
-//       price: "45",
-//       caleories: "250 - 300 Kcal",
-//       image: { fields: { file: { url: "static/images/sandwich2.jpg" } } },
-//     },
-//   },
-//   {
-//     sys: { id: "5" },
-//     fields: {
-//       title: "Veg Schezuan Sandwitch",
-//       category: "Sandwitch",
-//       price: "45",
-//       caleories: "230 - 285 Kcal",
-//       image: { fields: { file: { url: "static/images/schez-sandwitch.jpg" } } },
-//     },
-//   },
-//   {
-//     sys: { id: "6" },
-//     fields: {
-//       title: "Masala Maggie",
-//       category: "Maggie",
-//       price: "25",
-//       caleories: "150 - 280 Kcal",
-//       image: { fields: { file: { url: "static/images/maggie.jpg" } } },
-//     },
-//   },
-//   {
-//     sys: { id: "7" },
-//     fields: {
-//       title: "Schezuan Maggie",
-//       category: "Maggie",
-//       price: "30",
-//       caleories: "165 - 225 Kcal",
-//       image: { fields: { file: { url: "static/images/maggie-s.jpg" } } },
-//     },
-//   },
-//   {
-//     sys: { id: "8" },
-//     fields: {
-//       title: "Veg Maggie",
-//       category: "Maggie",
-//       price: "30",
-//       caleories: "170 - 220 Kcal",
-//       image: { fields: { file: { url: "static/images/veg-maggie.jpg" } } },
-//     },
-//   },
-//   {
-//     sys: { id: "9" },
-//     fields: {
-//       title: "Cheese Garlic Maggie",
-//       category: "Maggie",
-//       price: "40",
-//       caleories: "190 - 230 Kcal",
-//       image: { fields: { file: { url: "static/images/garlic-maggie.jpg" } } },
-//     },
-//   },
-//   {
-//     sys: { id: "10" },
-//     fields: {
-//       title: "Cheese Veg Maggie",
-//       category: "Maggie",
-//       price: "45",
-//       caleories: "175 - 235 Kcal",
-//       image: { fields: { file: { url: "static/images/cheese-maggie.jpg" } } },
-//     },
-//   },
-//   {
-//     sys: { id: "11" },
-//     fields: {
-//       title: "Masala Fries",
-//       category: "Fries",
-//       price: "35",
-//       caleories: "120 - 185 Kcal",
-//       image: { fields: { file: { url: "static/images/frenchfries.jpg" } } },
-//     },
-//   },
-//   {
-//     sys: { id: "12" },
-//     fields: {
-//       title: "Schezuan Fries",
-//       category: "Fries",
-//       price: "45",
-//       caleories: "135 - 210 Kcal",
-//       image: { fields: { file: { url: "static/images/shezuan.jpg" } } },
-//     },
-//   },
-//   {
-//     sys: { id: "13" },
-//     fields: {
-//       title: "Cheese Fries",
-//       category: "Fries",
-//       price: "40",
-//       caleories: "140 - 156 Kcal",
-//       image: { fields: { file: { url: "static/images/cheese-fries.jpg" } } },
-//     },
-//   },
-//   {
-//     sys: { id: "14" },
-//     fields: {
-//       title: "Red Sause Pasta",
-//       category: "Pasta",
-//       price: "80",
-//       caleories: "241 - 321 Kcal",
-//       image: { fields: { file: { url: "static/images/pasta.jpg" } } },
-//     },
-//   },
-//   {
-//     sys: { id: "15" },
-//     fields: {
-//       title: "White Sause Pasta",
-//       category: "Pasta",
-//       price: "80",
-//       caleories: "265 - 321 Kcal",
-//       image: { fields: { file: { url: "static/images/white-pasta.jpg" } } },
-//     },
-//   },
-//   {
-//     sys: { id: "16" },
-//     fields: {
-//       title: "Milk Shakes",
-//       category: "Beverages",
-//       price: "35",
-//       caleories: "155 - 210 Kcal",
-//       image: { fields: { file: { url: "static/images/milk-shake.jpg" } } },
-//     },
-//   },
-//   {
-//     sys: { id: "17" },
-//     fields: {
-//       title: "Hot Chocolate",
-//       category: "Beverages",
-//       price: "35",
-//       caleories: "230 - 280 Kcal",
-//       image: { fields: { file: { url: "static/images/hot-coffee.jpg" } } },
-//     },
-//   },
-//   {
-//     sys: { id: "18" },
-//     fields: {
-//       title: "Aerated Drinks",
-//       category: "Beverages",
-//       price: "10",
-//       caleories: "260 - 365 Kcal",
-//       image: { fields: { file: { url: "static/images/Aerated-Drinks.jpg" } } },
-//     },
-//   },
-//   {
-//     sys: { id: "19" },
-//     fields: {
-//       title: "Cold Coffee",
-//       category: "Beverages",
-//       price: "35",
-//       caleories: "255 - 360 Kcal",
-//       image: { fields: { file: { url: "static/images/cold-coffee.jpg" } } },
-//     },
-//   },
-//   {
-//     sys: { id: "20" },
-//     fields: {
-//       title: "Coffee",
-//       category: "Beverages",
-//       price: "15",
-//       caleories: "220 - 265 Kcal",
-//       image: { fields: { file: { url: "static/images/coffee.jpg" } } },
-//     },
-//   },
-//   {
-//     sys: { id: "21" },
-//     fields: {
-//       title: "Tea",
-//       category: "Beverages",
-//       price: "10",
-//       caleories: "155 - 225 Kcal",
-//       image: { fields: { file: { url: "static/images/tea.jpg" } } },
-//     },
-//   },
-//   {
-//     sys: { id: "22" },
-//     fields: {
-//       title: "Chocate Frappe",
-//       category: "Beverages",
-//       price: "35",
-//       caleories: "265 - 355 Kcal",
-//       image: { fields: { file: { url: "static/images/beverage.jpg" } } },
-//     },
-//   },
-//   {
-//     sys: { id: "23" },
-//     fields: {
-//       title: "Veg Puff",
-//       category: "Bakery",
-//       price: "35",
-//       caleories: "260 - 320 Kcal",
-//       image: { fields: { file: { url: "static/images/puff.jpg" } } },
-//     },
-//   },
-//   {
-//     sys: { id: "24" },
-//     fields: {
-//       title: "Panner Puff",
-//       category: "Bakery",
-//       price: "15",
-//       caleories: "255 - 390 Kcal",
-//       image: { fields: { file: { url: "static/images/samosa.jpg" } } },
-//     },
-//   },
-//   {
-//     sys: { id: "25" },
-//     fields: {
-//       title: "Khari",
-//       category: "Bakery",
-//       price: "20",
-//       caleories: "265 - 375 Kcal",
-//       image: { fields: { file: { url: "static/images/panner-puff.jpg" } } },
-//     },
-//   },
-//   {
-//     sys: { id: "26" },
-//     fields: {
-//       title: "Noodle Puff",
-//       category: "Bakery",
-//       price: "15",
-//       caleories: "300 - 425 Kcal",
-//       image: { fields: { file: { url: "static/images/noodle-puff.jpg" } } },
-//     },
-//   },
-// ];
+
 
 // Menu Section -
 const menuSection = document.querySelector(".menu-section");
@@ -320,7 +59,7 @@ function displayMenuItems(menuItems) {
             <div class="menu-cart-functionality">
                 <div class="price">&#8377;${item.fields.price}</div>
                 <div class="cart-btn-container">
-                    <button class="bag-btn" id="add-to-cart-btn" onClick="addToCart(this)" data-id=${item.sys.id}>Add to Cart</i></button>
+                    <button class="bag-btn" id="add-to-cart-btn" onClick="addToCart()" data-id=${item.sys.id}>Add to Cart</i></button>
                 </div>
             </div>
             </div>
@@ -334,77 +73,17 @@ function displayMenuItems(menuItems) {
   }
 
 }
-// function addToCart(element) {
-//   console.log(element.parentNode.parentNode.parentNode.querySelector('.item-name').innerText)
-//   console.log(element.parentNode.parentNode.parentNode.querySelector('.price').innerText)
-//   let userId = "user"; // Replace with the actual user ID
-//   let cartId = "cart"; // Replace with the actual cart ID
-//   let fooditem = element.parentNode.parentNode.parentNode.querySelector('.item-name').innerText
-//   let price = element.parentNode.parentNode.parentNode.querySelector('.price').innerText
+function addToCart(element) {
+  console.log(element.parentNode.parentNode.parentNode.querySelector('.item-name').innerText)
+  console.log(element.parentNode.parentNode.parentNode.querySelector('.price').innerText)
+  let userId = "user"; // Replace with the actual user ID
+  let cartId = "cart"; // Replace with the actual cart ID
+  let fooditem = element.parentNode.parentNode.parentNode.querySelector('.item-name').innerText
+  let price = element.parentNode.parentNode.parentNode.querySelector('.price').innerText
 
-//   // Create an object with the cart item details
-//   let cartItem = {
-//     userId: userId,
-//     cartId: cartId,
-//     foodItem: fooditem,
-//     totalAmount: price,
-//   };
-
-//   // Send an AJAX request to your server to save the cart item
-//   // Example using fetch:
-//   fetch("/add_to_cart", {
-//     method: "POST",
-//     headers: {
-//       "Content-Type": "application/json",
-//     },
-//     body: JSON.stringify(cartItem),
-//   })
-//     .then(function (response) {
-//       // Handle the response from the server
-//       if (response.ok) {
-//         // Item added to cart successfully
-//         alert("Item added to cart!");
-//       } else {
-//         // Error occurred while adding item to cart
-//         alert("Error adding item to cart. Please try again.");
-//       }
-//     })
-//     .catch(function (error) {
-//       // Error occurred while making the request
-//       console.error("Error:", error);
-//       alert("An error occurred. Please try again later.");
-//     });
-// }
-
-function logout(){
-  windows.location.href='/';
-}
-
-function options() {
-  const element = document.getElementById("menu_details");
-  element.scrollIntoView();
-}
-
-var v =[]
-  
-  let total =0
-
-  function addToCart(element) {
-    console.log(element);
-    let fooditem = element.parentNode.parentNode.parentNode.querySelector('.item-name').innerText
-    let price = element.parentNode.parentNode.parentNode.querySelector('.price').innerText
-    total += parseInt(price.slice(1,price.length))
-    v.push({fooditem,price})
-    console.log(v)
-    console.log(total);
-    let t = document.getElementById('cart-values').innerText 
-    t= parseInt(t)+1
-    document.getElementById('cart-values').innerText = t
-    let email="{{email}}";
-    // let userId="user";
-    let cartId="cart";
-    let cartItem = {
-    userId: email,
+  // Create an object with the cart item details
+  let cartItem = {
+    userId: userId,
     cartId: cartId,
     foodItem: fooditem,
     totalAmount: price,
@@ -422,6 +101,7 @@ var v =[]
     .then(function (response) {
       // Handle the response from the server
       if (response.ok) {
+
         // Item added to cart successfully
         alert("Item added to cart!");
       } else {
@@ -434,13 +114,18 @@ var v =[]
       console.error("Error:", error);
       alert("An error occurred. Please try again later.");
     });
-  }
+}
 
-  function findTotalPrice() {
-    let c=document.querySelector('.cart-total')
-    console.log(c)
-    c.innerHTML=total
-  }  
+function logout(){
+  windows.location.href='/';
+}
+
+function options() {
+  const element = document.getElementById("menu_details");
+  element.scrollIntoView();
+}
+
+
 
 
 
