@@ -129,6 +129,7 @@ def index():
 
             #find the new created account and its email
             user_data = records.find_one({"email": email})
+            print("User Data : ",user_data)
             new_email = user_data['email']
             print(user_data)
             #if registered redirect to logged in as the registered user
