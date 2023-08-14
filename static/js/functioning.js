@@ -6,7 +6,7 @@ function menucall()
       items.json()
       .then((val)=>{
         // console.log('json --' + val);
-        document.getElementById('menu_fetch').innerHTML += '';
+        document.getElementById('menu_fetch').innerHTML = '';
         for (let i=0; i<val.length; i++){
           
           let cat = document.querySelector(".category-search").value;
@@ -22,7 +22,7 @@ function menucall()
                   <div class="item-category">${val[i].category}</div>
                   <div class="flex" style="margin-top: 10px;">
                       
-                      <p>${val[i].quantity}</p>
+                 
                   </div>
               </figure>
               <hr style="margin: 10px 0;">
