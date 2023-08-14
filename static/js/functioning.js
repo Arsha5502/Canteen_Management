@@ -6,7 +6,7 @@ function menucall()
       items.json()
       .then((val)=>{
         // console.log('json --' + val);
-        document.getElementById('menu_fetch').innerHTML = '';
+        document.getElementById('menu_fetch').innerHTML += '';
         for (let i=0; i<val.length; i++){
           
           let cat = document.querySelector(".category-search").value;
